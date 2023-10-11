@@ -1,0 +1,64 @@
+.footer {
+    $color: $darkCerulean;
+
+    // background-color: hsl(193, 84%, 34%);
+    background-color: hsl(30, 100%, 95%);
+
+    &__container {
+        display: grid;
+        gap: 2rem;
+
+        @include breakpoints-up(large) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+
+    &__logo {
+        font-size: 2rem;
+        color: $color;
+    }
+
+    &__heading {
+        font-size: 1rem;
+        color: $color;
+        font-weight: 600;
+    }
+
+    &__menu {
+        margin-top: 0.625rem;
+        color: $color;
+        font-size: $font-small;
+        font-weight: 300;
+
+        a {
+            color: $color;
+        }
+
+        li {
+            margin-top: 0.3125rem;
+        }
+    }
+
+    &__socials {
+        grid-column: span 2;
+
+        ul {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        img {
+            height: 1.5rem;
+        }
+
+        li:not(:last-child) {
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__copyright {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        color: $color;
+    }
+}

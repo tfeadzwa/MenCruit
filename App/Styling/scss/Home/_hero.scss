@@ -1,0 +1,116 @@
+.hero {
+    background-color: rgb(14, 129, 160);
+    margin-top: 3.8rem;
+
+    @include breakpoints-up(large) {
+        margin-top: 4.5rem;
+    }
+
+    &__section {
+        flex-direction: column;
+        color: $white;
+
+        @include breakpoints-up(large) {
+            flex-direction: row;
+            // gap: 2rem;
+        }
+    }
+
+    &__text-content {
+        flex: 1;
+        margin-right: 2rem;
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: $white;
+            margin: 2rem 0;
+
+            @include breakpoints-up(large) {
+                margin-right: 2rem;
+                font-size: 4rem;
+                line-height: 4.75rem;
+            }
+        }
+
+        p {
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.4;
+
+            @include breakpoints-up(large) {
+                font-size: 1.25rem;
+                line-height: 1.9375rem;
+            }
+        }
+
+        @include breakpoints-up(large) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__image-content {
+        display: flex;
+        flex: 1.2;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+        }
+
+        @include breakpoints-up(large) {
+            align-items: center;
+        }
+    }
+
+    // infinite scroll corousel
+    .logos {
+        overflow: hidden;
+        white-space: nowrap;
+        height: fit-content;
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.25rem;
+            color: $white;
+            line-height: 1.9375rem;
+            margin-bottom: 2.5rem;
+            margin-top: 2.5rem;
+            text-align: center;
+            font-weight: 500;
+            white-space: normal;
+            overflow: hidden;
+        }
+
+        .__looper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: inline-block;
+            animation: looper 30s linear infinite;
+
+            img {
+                height: 6rem;
+                margin: 0 2rem;
+            }
+
+            // adjust positioning
+            :nth-child(6) {
+                height: 5rem;
+            }
+        }
+
+        @keyframes looper {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+}
