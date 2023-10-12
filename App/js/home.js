@@ -1,12 +1,9 @@
-onHoverEvents();
 onScrollEvent1();
 horizontalScroll();
 // onScrollEvent2();
 
 
-function onHoverEvents() {
-    const header = document.querySelector('.header__links').getElementsByTagName('a');
-}
+
 
 function onScrollEvent1() {
     var header = document.querySelector(".header");

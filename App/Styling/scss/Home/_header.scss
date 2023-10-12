@@ -7,6 +7,10 @@
         transition: all 0.5s ease;
         background-color: hsl(193, 84%, 34%);
 
+        .active {
+            background-color: magenta;
+        }
+
         nav {
             @include breakpoints-up(large) {
                 height: 4.5rem;
