@@ -1,11 +1,8 @@
-onScrollEvent1();
+onScrollEvent();
+displayMenuItems();
 horizontalScroll();
-// onScrollEvent2();
 
-
-
-
-function onScrollEvent1() {
+function onScrollEvent() {
     var header = document.querySelector(".header");
 
     // header.addEventListener("touchmove", function () {
@@ -21,9 +18,11 @@ function onScrollEvent1() {
     });
 }
 
-// same with onScrollEvent
+// same with onScrollEvent , make sure to add class 'onscroll' to the style sheet
 function onScrollEvent2() {
-    window.onscroll = () => scrollFunction();
+    window.onscroll = () => {
+        return scrollFunction();
+    };
 
     function scrollFunction() {
         const header = document.querySelector("header");
@@ -34,6 +33,43 @@ function onScrollEvent2() {
         }
     }
 }
+
+//? display menu items for each link item on mouse hover & mouse out
+function displayMenuItems() {
+    let headerLinks = document.querySelectorAll(".header__links a");
+    let menuItems = document.querySelectorAll(".menu .header__menu");
+    let timeoutID; // A variable to store the timeout ID
+
+    for (let i = 0; i < menuItems.length; i++) {
+        headerLinks[i].addEventListener("mouseover", function () {
+            // Show the menu item
+            menuItems[i].style.display = "block";
+            // Clear any previous timeout
+            clearTimeout(timeoutID);
+        });
+
+        headerLinks[i].addEventListener("mouseout", function () {
+            // Set a timeout to hide the menu item after 1 second
+            timeoutID = setTimeout(function () {
+                menuItems[i].style.display = "none";
+            }, 500);
+        });
+
+        // Add an event listener for the menu item
+        menuItems[i].addEventListener("mouseover", function () {
+            // Clear any previous timeout
+            clearTimeout(timeoutID);
+            menuItems[i].style.display = "block";
+        });
+
+        menuItems[i].addEventListener("mouseout", function () {
+            // Hide the menu item
+            menuItems[i].style.display = "none";
+        });
+    }
+
+}
+
 
 function horizontalScroll() {
     const scrollImages = document.querySelector(".hrtools__cards-container");
