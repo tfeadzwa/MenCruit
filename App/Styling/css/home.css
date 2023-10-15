@@ -242,14 +242,14 @@ button {
 }
 .header__links a {
   display: flex;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 550;
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 100%);
   padding: 0.625rem;
   border: 0.06rem solid transparent;
   border-radius: 0.0625rem;
   margin-left: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: hsl(0, 0%, 100%);
   transition: all 0.5s ease-in-out;
 }
 .header__links a svg {
@@ -257,8 +257,8 @@ button {
   transition: transform 0.5s ease;
 }
 .header__links a:hover {
-  border-color: rgba(213, 227, 252, 0.4);
-  background-color: rgba(213, 227, 252, 0.4);
+  border-color: hsla(218, 87%, 91%, 0.4);
+  background-color: hsla(218, 87%, 91%, 0.4);
 }
 .header__links a:hover svg {
   transform: rotate(180deg);
@@ -266,7 +266,7 @@ button {
 .header__menu {
   z-index: 100;
   position: absolute;
-  top: 5rem;
+  top: 0.5rem;
   left: 50%;
   transform: translate(-50%, 0);
   display: grid;
@@ -278,7 +278,18 @@ button {
   background-color: hsl(0, 0%, 100%);
 }
 .header__menu a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   color: hsl(221, 71%, 28%);
+}
+.header__menu a:hover {
+  background-color: hsla(218, 87%, 91%, 0.5);
+}
+.header__sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .header__menu-header {
   display: flex;
@@ -291,7 +302,6 @@ button {
   color: hsl(221, 71%, 28%);
 }
 .header__menu-sub-header {
-  margin-top: 1.2rem;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -300,8 +310,14 @@ button {
   font-weight: 400;
 }
 .header .overlay {
-  display: block;
-  background-color: blue;
+  position: absolute;
+  top: 4.5rem;
+  width: 100%;
+  height: 100vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: hsla(100, 87%, 81%, 0.4);
+  transition: transform 550ms ease-in-out;
 }
 @media (max-width: 63.9375em) {
   .header__toggle {

@@ -18,6 +18,7 @@
 <body>
     <header class="header">
         <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+            <!-- HEADER LINKS -->
             <div class="header__left-section">
                 <!-- logo -->
                 <a href="#" class="logo">MenCruit</a>
@@ -73,10 +74,11 @@
                 </div>
             </div>
 
+            <!-- MENU ITEMS -->
             <div class="menu hide-for-mobile">
                 <!-- menu-item 1 -->
-                <div class="header__menu" style="display: none;">
-                    <div class="header__hire-anywhere">
+                <div class="header__menu" style="visibility: hidden;">
+                    <div class="header__hire-anywhere header__sub-menu">
                         <div class="header__menu-header">
                             <img src="/App/assets/icons/hire-anywhere.svg" alt="">
                             <span>Hire Anywhere</span>
@@ -103,7 +105,7 @@
                             <span class="header__menu-sub-header-text">Run compliant checks globally</span>
                         </a>
                     </div>
-                    <div class="header__manage-team">
+                    <div class="header__manage-team header__sub-menu">
                         <div class="header__menu-header">
                             <img src="/App/assets/icons/manage-your-team.svg" alt="">
                             <span>Manage Your Team</span>
@@ -142,7 +144,7 @@
                                 processes</span>
                         </a>
                     </div>
-                    <div class="header__manage-team">
+                    <div class="header__manage-team header__sub-menu">
                         <div class="header__menu-header">
                             <img src="/App/assets/icons/pay-globally.svg" alt="">
                             <span>Pay Globally</span>
@@ -154,15 +156,14 @@
                         <a href="#">
                             <div class="header__menu-sub-header">PEO</div>
                             <span class="header__menu-sub-header-text">Manage payroll, benefits, and HR for
-                                US
-                                teams</span>
+                                US teams</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- menu-item 2 -->
-                <div class="header__menu" style="display: none;">
-                    <div class="header__business-size">
+                <div class="header__menu" style="visibility: hidden;">
+                    <div class="header__business-size header__sub-menu">
                         <div class="header__menu-header">
                             <img src="/App/assets/icons/business-size.svg" alt="">
                             <span>Business Size</span>
@@ -174,52 +175,81 @@
                         </a>
                         <a href="#">
                             <div class="header__menu-sub-header">Enterprise</div>
-                            <span class="header__menu-sub-header-text">Effortlessly plug Deel into your existing
+                            <span class="header__menu-sub-header-text">Effortlessly plug MenCruit into your existing
                                 workflows</span>
                         </a>
-
-                        <div class="header__solutions">
-                            <div class="header__menu-header">
-                                <img src="/App/assets/icons/solutions.svg" alt="">
-                                <span>Solutions</span>
-                            </div>
-                            <a href="#">
-                                <div class="header__menu-sub-header">Stay Compliant</div>
-                                <span class="header__menu-sub-header-text">Put your mind at ease</span>
-                            </a>
-                            <a href="#">
-                                <div class="header__menu-sub-header">Run Global Payroll</div>
-                                <span class="header__menu-sub-header-text">Run payroll in 100+ countries</span>
-                            </a>
-                            <a href="#">
-                                <div class="header__menu-sub-header">Industries</div>
-                                <span class="header__menu-sub-header-text">Stay at the forefront regardless of your
-                                    industry</span>
-                            </a>
-                            <div class="header__for-teams">
-                                <div class="header__menu-header">
-                                    <img src="/App/assets/icons/for-teams.svg" alt="">
-                                    <span>For Teams</span>
-                                </div>
-                                <a href="#">
-                                    <div class="header__menu-sub-header">Finance teams</div>
-                                    <span class="header__menu-sub-header-text">Save hours on admin and payroll</span>
-                                </a>
-                                <a href="#">
-                                    <div class="header__menu-sub-header">Legal teams</div>
-                                    <span class="header__menu-sub-header-text">Hire abroad without legal admin</span>
-                                </a>
-                                <a href="#">
-                                    <div class="header__menu-sub-header">Hiring managers</div>
-                                    <span class="header__menu-sub-header-text">Hit your hiring targets faster</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="header__solutions header__sub-menu">
+                        <div class="header__menu-header">
+                            <img src="/App/assets/icons/solutions.svg" alt="">
+                            <span>Solutions</span>
                         </div>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Stay Compliant</div>
+                            <span class="header__menu-sub-header-text">Put your mind at ease</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Run Global Payroll</div>
+                            <span class="header__menu-sub-header-text">Run payroll in 100+ countries</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Industries</div>
+                            <span class="header__menu-sub-header-text">Stay at the forefront regardless of your
+                                industry</span>
+                        </a>
+                    </div>
+                    <div class="header__for-teams header__sub-menu">
+                        <div class="header__menu-header">
+                            <img src="/App/assets/icons/for-teams.svg" alt="">
+                            <span>For Teams</span>
+                        </div>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Finance teams</div>
+                            <span class="header__menu-sub-header-text">Save hours on admin and payroll</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Legal teams</div>
+                            <span class="header__menu-sub-header-text">Hire abroad without legal admin</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Hiring managers</div>
+                            <span class="header__menu-sub-header-text">Hit your hiring targets faster</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu-item 3 -->
+                <div class="header__menu" style="visibility: hidden;">
+                    <div class="header__benefits header__sub-menu">
+                        <div class="header__menu-header">
+                            <img src="/App/assets/icons/business-size.svg" alt="">
+                            <span>Benefits</span>
+                        </div>
+                        <a href="#">
+                            <div class="header__menu-sub-header">About us</div>
+                            <span class="header__menu-sub-header-text">Everything you'd want to know</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Compare competitors</div>
+                            <span class="header__menu-sub-header-text">Why choose MenCruit</span>
+                        </a>
+                    </div>
+                    <div class="header__solutions header__sub-menu">
+                        <div class="header__menu-header">
+                        </div>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Case studies</div>
+                            <span class="header__menu-sub-header-text">How we help other companies</span>
+                        </a>
+                        <a href="#">
+                            <div class="header__menu-sub-header">Solutions</div>
+                            <span class="header__menu-sub-header-text">Enhance your global growth</span>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- right section -->
+            <!-- HEADER BUTTONS -->
             <div class="right-section">
                 <a href="#" class="button btnLogin">Log In</a>
                 <a href="#" class="button btnSignup">Sign Up</a>

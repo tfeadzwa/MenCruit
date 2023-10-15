@@ -38,33 +38,30 @@ function onScrollEvent2() {
 function displayMenuItems() {
     let headerLinks = document.querySelectorAll(".header__links a");
     let menuItems = document.querySelectorAll(".menu .header__menu");
-    let timeoutID; // A variable to store the timeout ID
+    let menuLinks = document.querySelector(".menu");
 
     for (let i = 0; i < menuItems.length; i++) {
+
         headerLinks[i].addEventListener("mouseover", function () {
-            // Show the menu item
-            menuItems[i].style.display = "block";
-            // Clear any previous timeout
-            clearTimeout(timeoutID);
+            menuLinks.classList.add("overlay");
+            menuItems[i].style.visibility = "visible";
         });
 
         headerLinks[i].addEventListener("mouseout", function () {
-            // Set a timeout to hide the menu item after 1 second
-            timeoutID = setTimeout(function () {
-                menuItems[i].style.display = "none";
-            }, 500);
+            menuLinks.classList.remove("overlay");
+            menuItems[i].style.visibility = "hidden";
         });
 
         // Add an event listener for the menu item
         menuItems[i].addEventListener("mouseover", function () {
-            // Clear any previous timeout
-            clearTimeout(timeoutID);
-            menuItems[i].style.display = "block";
+            menuLinks.classList.add("overlay");
+            menuItems[i].style.visibility = "visible";
         });
 
         menuItems[i].addEventListener("mouseout", function () {
             // Hide the menu item
-            menuItems[i].style.display = "none";
+            menuLinks.classList.remove("overlay");
+            menuItems[i].style.visibility = "hidden";
         });
     }
 

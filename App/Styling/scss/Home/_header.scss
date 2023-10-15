@@ -60,14 +60,14 @@
 
             a {
                 display: flex;
-                font-family: 'Open Sans', sans-serif;
-                font-weight: 550;
-                font-size: 0.875rem;
-                color: $white;
                 padding: 0.625rem;
                 border: 0.0600rem solid transparent;
                 border-radius: 0.0625rem;
                 margin-left: 0.8rem;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 0.875rem;
+                font-weight: 550;
+                color: $white;
                 transition: all 0.5s ease-in-out;
 
                 svg {
@@ -76,8 +76,8 @@
                 }
 
                 &:hover {
-                    border-color: rgb(213, 227, 252, 0.4);
-                    background-color: rgba(213, 227, 252, 0.4);
+                    border-color: hsla(218, 87%, 91%, 0.4);
+                    background-color: hsla(218, 87%, 91%, 0.4);
 
                     svg {
                         transform: rotate(180deg);
@@ -89,7 +89,7 @@
         &__menu {
             z-index: 100;
             position: absolute;
-            top: 5rem;
+            top: 0.5rem;
             left: 50%;
             transform: translate(-50%, 0);
 
@@ -103,8 +103,21 @@
             background-color: $white;
 
             a {
+                display: inline-block;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
                 color: $darkCerulean;
+
+                &:hover {
+                    background-color: hsla(218, 87%, 91%, 0.5);
+                }
             }
+        }
+
+        &__sub-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
 
         &__menu-header {
@@ -120,7 +133,7 @@
         }
 
         &__menu-sub-header {
-            margin-top: 1.2rem;
+            // margin-top: 1.2rem;
             font-size: 0.875rem;
             font-weight: 600;
         }
@@ -131,8 +144,15 @@
         }
 
         .overlay {
-            display: block;
-            background-color: blue;
+            position: absolute;
+            top: 4.5rem;
+            width: 100%;
+            height: 100vh;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: hsla(100, 87%, 81%, 0.4);
+
+            transition: transform 550ms ease-in-out;
         }
 
         &__toggle {
