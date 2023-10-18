@@ -3,7 +3,7 @@ displayMenuItems();
 horizontalScroll();
 
 function onScrollEvent() {
-    var header = document.querySelector(".header");
+    const header = document.querySelector(".header");
 
     // header.addEventListener("touchmove", function () {
     //     header.setAttribute("data-scroll", "true");
@@ -43,24 +43,24 @@ function displayMenuItems() {
     for (let i = 0; i < menuItems.length; i++) {
 
         headerLinks[i].addEventListener("mouseover", function () {
-            menuLinks.classList.add("overlay");
+            menuLinks.classList.add("menu-overlay");
             menuItems[i].style.visibility = "visible";
         });
 
         headerLinks[i].addEventListener("mouseout", function () {
-            menuLinks.classList.remove("overlay");
+            menuLinks.classList.remove("menu-overlay");
             menuItems[i].style.visibility = "hidden";
         });
 
         // Add an event listener for the menu item
         menuItems[i].addEventListener("mouseover", function () {
-            menuLinks.classList.add("overlay");
+            menuLinks.classList.add("menu-overlay");
             menuItems[i].style.visibility = "visible";
         });
 
         menuItems[i].addEventListener("mouseout", function () {
             // Hide the menu item
-            menuLinks.classList.remove("overlay");
+            menuLinks.classList.remove("menu-overlay");
             menuItems[i].style.visibility = "hidden";
         });
     }
@@ -107,5 +107,4 @@ function horizontalScroll() {
 
     leftButton.addEventListener("click", leftScroll);
     rightButton.addEventListener("click", rightScroll);
-
 }

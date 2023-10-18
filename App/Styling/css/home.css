@@ -263,18 +263,29 @@ button {
 .header__links a:hover svg {
   transform: rotate(180deg);
 }
+.header .menu-overlay {
+  position: absolute;
+  top: 4.5rem;
+  width: 100%;
+  height: 100vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: hsla(100, 87%, 81%, 0.4);
+  transition: all 550ms ease-in-out;
+}
 .header__menu {
-  z-index: 100;
+  visibility: hidden;
   position: absolute;
   top: 0.5rem;
   left: 50%;
-  transform: translate(-50%, 0);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   padding: 2.25rem;
   border-radius: 0.5rem;
   width: 65vw;
+  transform: translateX(-50%);
+  background-color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 100%);
 }
 .header__menu a {
@@ -308,16 +319,6 @@ button {
 .header__menu-sub-header-text {
   font-size: 0.875rem;
   font-weight: 400;
-}
-.header .overlay {
-  position: absolute;
-  top: 4.5rem;
-  width: 100%;
-  height: 100vh;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: hsla(100, 87%, 81%, 0.4);
-  transition: transform 550ms ease-in-out;
 }
 @media (max-width: 63.9375em) {
   .header__toggle {
