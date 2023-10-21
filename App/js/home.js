@@ -51,18 +51,6 @@ function displayMenuItems() {
             menuLinks.classList.remove("menu-overlay");
             menuItems[i].style.visibility = "hidden";
         });
-
-        // Add an event listener for the menu item
-        menuItems[i].addEventListener("mouseover", function () {
-            menuLinks.classList.add("menu-overlay");
-            menuItems[i].style.visibility = "visible";
-        });
-
-        menuItems[i].addEventListener("mouseout", function () {
-            // Hide the menu item
-            menuLinks.classList.remove("menu-overlay");
-            menuItems[i].style.visibility = "hidden";
-        });
     }
 
 }

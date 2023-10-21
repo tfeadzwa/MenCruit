@@ -1,0 +1,27 @@
+// css custom properties
+:root {
+    --blue-green: hsl(193, 84%, 34%);
+    --dodger-blue: hsl(219, 87%, 56%);
+    --shade-of-blue: hsl(218, 87%, 91%);
+    --dark-cerulean: hsl(221, 71%, 28%);
+    --midnight-express: hsl(221, 76%, 10%);
+    --aqua-blue: hsl(219, 87%, 56%);
+    --old-lace: hsl(39, 100%, 94%);
+    --airforce-blue: hsl(210, 29%, 50%);
+    --azure-mist: hsl(210, 100%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+$darkCerulean: hsl(221, 71%, 28%);
+$midnightExpress: hsl(221, 76%, 10%);
+$dodgerBlue: hsl(219, 87%, 56%);
+$white: hsl(0, 0%, 100%);
+$somecolor: hsl(218, 87%, 91%);
+// background-color: rgba(213, 227, 252, 0.5);
+
+//hero section
+$persianGreen: hsl(157, 100%, 34%); //or jade
+$aquaBlue: hsl(219, 87%, 56%); // //shadeofBlue or mizu-iro
+$oldLace: hsl(39, 100%, 94%); //shadeOfWhite - pale cream color
+$airForceBlue: hsl(210, 29%, 50%); // color of sky on clear day
+$azureMist: hsl(210, 100%, 96%); // sky color on cloud day - calmness and tranquility

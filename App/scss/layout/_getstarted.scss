@@ -1,20 +1,25 @@
+@use '../util' as u;
+
 .getstarted {
+    background-color: hsl(185, 61%, 56%);
+
     text-align: center;
 
     h2 {
         margin-bottom: 1.2rem;
         font-weight: 700;
-        color: $darkCerulean;
+        color: var(--white);
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             font-size: 3rem;
         }
     }
 
     p {
         margin-bottom: 0.75rem;
-        font-weight: 400;
+        font-weight: 450;
         line-height: 150%;
+        color: var(--white);
     }
 
     button {

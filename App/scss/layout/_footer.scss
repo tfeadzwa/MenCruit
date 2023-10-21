@@ -1,25 +1,28 @@
-.footer {
-    $color: $darkCerulean;
+@use '../util' as u;
 
-    // background-color: hsl(193, 84%, 34%);
-    background-color: hsl(30, 100%, 95%);
+.footer {
+    $color: var(--white);
+
+    background-color: var(--blue-green);
+    // background-color: hsl(30, 100%, 95%);
+    // background-color: hsl(185, 61%, 56%);
 
     &__container {
         display: grid;
         gap: 2rem;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             grid-template-columns: repeat(6, 1fr);
         }
     }
 
     &__logo {
-        font-size: 2rem;
+        font-size: u.$font-medium-large;
         color: $color;
     }
 
     &__heading {
-        font-size: 1rem;
+        font-size: u.$font-small;
         color: $color;
         font-weight: 600;
     }
@@ -27,8 +30,8 @@
     &__menu {
         margin-top: 0.625rem;
         color: $color;
-        font-size: $font-small;
-        font-weight: 300;
+        font-size: u.$font-small;
+        font-weight: 350;
 
         a {
             color: $color;

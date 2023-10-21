@@ -1,0 +1,20 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--white);
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}

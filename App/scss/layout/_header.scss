@@ -1,0 +1,199 @@
+@use '../util' as u;
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    background-color: hsl(193, 84%, 34%);
+
+    .active {
+        background-color: magenta;
+    }
+
+    nav {
+        @include u.breakpoints-up(large) {
+            height: 4.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    // you can add the &.onscroll class here to use the onScrollEvent2() method in home.js script
+    &[data-scroll],
+    &:hover {
+        position: fixed;
+        background-color: var(--white);
+
+        a {
+            color: var(--dark-cerulean);
+        }
+
+        #btnhamburger {
+            >span {
+                background-color: var(--dark-cerulean);
+            }
+        }
+
+        .right-section {
+            .btnLogin {
+                color: var(--dark-cerulean);
+            }
+
+            .btnSignup {
+                color: var(--dark-cerulean);
+            }
+        }
+    }
+
+    &__left-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__links {
+        @include u.breakpoints-up(large) {
+            display: flex;
+        }
+
+        a {
+            display: flex;
+            padding: 0.625rem;
+            border: 0.0600rem solid transparent;
+            border-radius: 0.0625rem;
+            margin-left: 0.8rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 550;
+            color: var(--white);
+            transition: all 0.5s ease-in-out;
+
+            svg {
+                margin-left: 0.4rem;
+                transition: transform 0.5s ease;
+            }
+
+            &:focus {
+                border-color: hsla(218, 87%, 91%, 0.4);
+                background-color: hsla(218, 87%, 91%, 0.4);
+
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .menu-overlay {
+        position: absolute;
+        top: 4.5rem;
+        width: 100%;
+        height: 100vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: hsla(100, 87%, 81%, 0.4);
+
+        transition: all 550ms ease-in-out;
+    }
+
+    &__menu {
+        visibility: hidden;
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repea+t(3, 1fr);
+
+        padding: 2.25rem;
+        border-radius: 0.5rem;
+        width: 65vw;
+
+        transform: translateX(-50%);
+        background-color: var(--white);
+
+        background-color: var(--white);
+
+        a {
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--dark-cerulean);
+
+            &:hover {
+                background-color: hsla(218, 87%, 91%, 0.5);
+            }
+        }
+    }
+
+    &__sub-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__menu-header {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 0.625rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark-cerulean);
+        }
+    }
+
+    &__menu-sub-header {
+        // margin-top: 1.2rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    &__menu-sub-header-text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    &__toggle {
+        @include u.breakpoints-down(medium) {
+            display: inline-block;
+        }
+
+        >span {
+            display: block;
+            width: 1.265rem;
+            height: 0.125rem;
+            background-color: white;
+
+            &:not(:last-child) {
+                margin-bottom: 0.3125rem;
+            }
+        }
+    }
+
+    .right-section {
+        .btnLogin {
+            font-family: 'Open Sans' sans-serif;
+            border: 0.0625rem solid transparent;
+            background: rgba(213, 227, 252, 0);
+            border-radius: 0.0625rem 0.875rem;
+            transform: all 0.5s ease-in-out;
+            color: var(--white);
+
+            &:hover {
+                border-color: rgba(213, 227, 252, 0.4);
+                background-color: rgba(213, 227, 252, 0.4);
+            }
+        }
+
+        .btnSignup {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.button,
+button {
+    color: var(--dark-cerulean);
+    padding: 0.625rem 0.9375rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cta-button {
+    color: var(--dark-cerulean);
+    cursor: pointer;
+    background-color: var(--white);
+    padding: 1rem;
+    border: 0.0625rem solid rgba(var(--aqua-blue), 0.85);
+    margin: 1.5rem 0;
+    border-radius: 0.25rem 0.875rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: var(--white);
+        border-color: rgba(var(--aqua-blue), 1);
+        background-color: rgba(var(--aqua-blue), 1);
+    }
+}

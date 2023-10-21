@@ -1,13 +1,15 @@
+@use '../util' as u;
+
 .benefits {
-    background-color: $oldLace;
+    background-color: var(--old-lace);
 
     h2 {
         margin-bottom: 1.2rem;
         font-weight: 700;
-        color: $darkCerulean;
+        color: var(--dark-cerulean);
         text-align: left;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             font-size: 3rem;
         }
     }
@@ -20,7 +22,7 @@
 
         &::before {
             content: "";
-            background-image: url(/App/assets/icons/icon-check.svg);
+            background-image: url(/app/assets/icons/icon-check.svg);
             background-repeat: no-repeat;
             background-size: cover;
             height: 1.5rem;
@@ -39,11 +41,11 @@
         width: 100%;
         border-radius: 1rem;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex: 1.5;
         }
 
-        @include breakpoints-up(medium) {
+        @include u.breakpoints-up(medium) {
             height: 36rem;
             max-width: 100%;
         }
@@ -55,7 +57,7 @@
 
     &__content {
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex: 1.5;
         }
     }
@@ -64,7 +66,7 @@
         flex-direction: column;
         margin-bottom: 6rem;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex-direction: row;
         }
     }
@@ -72,24 +74,24 @@
     &__global-team {
         flex-direction: column;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex-direction: row;
         }
     }
 
     &__image1 {
-        background-image: url(/App/assets/images/happy-employer.jpg);
+        background-image: url(/app/assets/images/happy-employer.jpg);
 
 
-        @include breakpoints-up(medium) {
+        @include u.breakpoints-up(medium) {
             background-position: 88%;
         }
     }
 
     &__image2 {
-        background-image: url(/App/assets/images/excited-employer.jpg);
+        background-image: url(/app/assets/images/excited-employer.jpg);
 
-        @include breakpoints-up(medium) {
+        @include u.breakpoints-up(medium) {
             background-position: 41%;
         }
     }

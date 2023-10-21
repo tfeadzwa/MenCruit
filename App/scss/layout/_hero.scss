@@ -1,16 +1,18 @@
+@use '../util' as u;
+
 .hero {
-    background-color: rgb(14, 129, 160);
+    background-color: var(--blue-green);
     margin-top: 3.8rem;
 
-    @include breakpoints-up(large) {
+    @include u.breakpoints-up(large) {
         margin-top: 4.5rem;
     }
 
     &__section {
         flex-direction: column;
-        color: $white;
+        color: var(--white);
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex-direction: row;
             // gap: 2rem;
         }
@@ -23,10 +25,10 @@
         h1 {
             font-size: 1.75rem;
             font-weight: 700;
-            color: $white;
+            color: var(--white);
             margin: 2rem 0;
 
-            @include breakpoints-up(large) {
+            @include u.breakpoints-up(large) {
                 margin-right: 2rem;
                 font-size: 4rem;
                 line-height: 4.75rem;
@@ -38,13 +40,13 @@
             font-weight: 500;
             line-height: 1.4;
 
-            @include breakpoints-up(large) {
+            @include u.breakpoints-up(large) {
                 font-size: 1.25rem;
                 line-height: 1.9375rem;
             }
         }
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             margin-top: 2rem;
         }
     }
@@ -60,7 +62,7 @@
             border-radius: 0.5rem;
         }
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             align-items: center;
         }
     }
@@ -74,7 +76,7 @@
         h3 {
             font-family: 'Open Sans', sans-serif;
             font-size: 1.25rem;
-            color: $white;
+            color: var(--white);
             line-height: 1.9375rem;
             margin-bottom: 2.5rem;
             margin-top: 2.5rem;

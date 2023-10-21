@@ -1,26 +1,29 @@
+@use '../util' as u;
+
 .oneplatform {
     background-color: hsl(208.42, 90.48%, 95.88%);
 
     &__section {
         flex-direction: column;
 
-        @include breakpoints-up(large) {
+        @include u.breakpoints-up(large) {
             flex-direction: row;
             gap: 2rem;
         }
 
         .text-only {
             margin-bottom: 2rem;
-            @include breakpoints-up(large){
+
+            @include u.breakpoints-up(large) {
                 margin-bottom: 0;
             }
 
             h2 {
-                color: $darkCerulean;
+                color: var(--dark-cerulean);
                 font-size: 1.75rem;
                 margin-bottom: 1.5rem;
 
-                @include breakpoints-up(large) {
+                @include u.breakpoints-up(large) {
                     font-size: 3rem;
                 }
             }
@@ -28,20 +31,20 @@
             p {
                 // font-size: 1.15rem;
                 font-weight: 500;
-                color: $darkCerulean;
+                color: var(--dark-cerulean);
                 margin-bottom: 2rem;
                 line-height: 1.3;
             }
 
             #button {
-                border: 0.0625rem solid $darkCerulean;
+                border: 0.0625rem solid var(--dark-cerulean);
                 border-radius: 1rem;
                 padding: 1rem;
             }
         }
 
         .text-icon {
-            @include breakpoints-up(large) {
+            @include u.breakpoints-up(large) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 margin-top: 0.75rem;
@@ -54,14 +57,14 @@
                     margin-bottom: 1.5rem;
                 }
 
-                @include breakpoints-up(large){
-                    &:nth-child(odd){
+                @include u.breakpoints-up(large) {
+                    &:nth-child(odd) {
                         margin-right: 1rem;
                     }
                 }
 
                 &__title {
-                    color: $midnightExpress;
+                    color: var(--midnight-express);
                     font-size: 1rem;
                     font-weight: 700;
                     margin-bottom: 0.625rem;
@@ -73,7 +76,7 @@
                 }
 
                 &__description {
-                    color: $darkCerulean;
+                    color: var(--dark-cerulean);
                     font-size: 1.12rem;
                     font-weight: 300;
                 }
