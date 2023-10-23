@@ -1,46 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Hire Young Talent</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/App/Styling/css/home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/style.css" />
+  </head>
 
-<body>
-    <div class="login-container">
-        <section class="login__form-section container--pall">
-            <h1>Login</h1>
-            <form id="login__form">
-                <div class="login__form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="login__form-group">
-                    <label for="password">Email</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
+  <body style="width: 100%">
+    <div class="login container flex flex-ai-c flex-jc-c">
+      <div class="login__logo logo">MenCruit</div>
+      <section class="login__left-section hide-for-mobile">
+        <!-- ToDo -->
+      </section>
 
-                <div class="flex flex-ai-c">
-                    <div class="login__seperate"></div>
-                    <div class="login__seperate-text">or</div>
-                    <div class="login__seperate"></div>
-                </div>
+      <div class="login__form-section">
+        <div class="login__form-content">
+          <h1 class="login__title">Log in</h1>
+          <button type="button" class="login__button flex flex-jc-c flex-ai-c">
+            <svg
+              class="login__google-icon"
+              width="100%"
+              height="100%"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M17.6429 9.2067C17.6429 8.59491 17.5933 7.9798 17.4875 7.37793H8.99838V10.8437H13.8597C13.658 11.9614 13.0098 12.9502 12.0607 13.5786V15.8273H14.9609C16.664 14.2598 17.6429 11.9449 17.6429 9.2067Z"
+                  fill="#4285F4"
+                ></path>
+                <path
+                  d="M8.99832 18C11.4257 18 13.4727 17.203 14.9641 15.8273L12.0639 13.5786C11.257 14.1275 10.2153 14.4384 9.00162 14.4384C6.65365 14.4384 4.66284 12.8543 3.94853 10.7246H0.955692V13.0428C2.48353 16.0819 5.59541 18 8.99832 18Z"
+                  fill="#34A853"
+                ></path>
+                <path
+                  d="M3.94531 10.7246C3.56831 9.60685 3.56831 8.39649 3.94531 7.27872V4.96051H0.955782C-0.32072 7.5036 -0.32072 10.4997 0.955782 13.0428L3.94531 10.7246Z"
+                  fill="#FBBC04"
+                ></path>
+                <path
+                  d="M8.99832 3.56164C10.2814 3.54179 11.5216 4.02462 12.4508 4.91089L15.0204 2.34135C13.3933 0.813518 11.2338 -0.0264599 8.99832 -3.85195e-06C5.59541 -3.85195e-06 2.48353 1.91806 0.955692 4.9605L3.94522 7.2787C4.65623 5.14569 6.65035 3.56164 8.99832 3.56164Z"
+                  fill="#EA4335"
+                ></path>
+              </g>
+              <defs>
+                <clippath id="clip0">
+                  <rect width="17.6428" height="18" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg>
+            Log In Using Google
+          </button>
 
-                <div class="login__form-group">
-                    <button type="submit" id="submit">Log In</button>
-                </div>
-            </form>
-        </section>
+          <div class="login__seperator flex flex-ai-c">
+            <div class="login__seperate"></div>
+            <div class="login__seperate-text">or</div>
+            <div class="login__seperate"></div>
+          </div>
+
+          <div>Log in using email address</div>
+
+          <form id="login__form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </form>
+
+          <button type="submit" id="submit">Log In</button>
+
+          <div>Need to create an account <button>signup</button></div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

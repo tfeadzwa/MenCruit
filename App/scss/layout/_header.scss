@@ -9,10 +9,6 @@
     transition: all 0.5s ease;
     background-color: hsl(193, 84%, 34%);
 
-    .active {
-        background-color: magenta;
-    }
-
     nav {
         @include u.breakpoints-up(large) {
             height: 4.5rem;
@@ -23,7 +19,7 @@
 
     // you can add the &.onscroll class here to use the onScrollEvent2() method in home.js script
     &[data-scroll],
-    &:hover {
+    &:hover, &:focus {
         position: fixed;
         background-color: var(--white);
 
@@ -77,7 +73,7 @@
                 transition: transform 0.5s ease;
             }
 
-            &:focus {
+            &:hover {
                 border-color: hsla(218, 87%, 91%, 0.4);
                 background-color: hsla(218, 87%, 91%, 0.4);
 

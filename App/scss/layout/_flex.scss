@@ -1,15 +1,15 @@
 .flex {
-    display: flex;
+  display: flex;
 
-    &-jc-sb {
-        justify-content: space-between;
-    }
+  &-jc-sb {
+    justify-content: space-between;
+  }
 
-    &-jc-c {
-        justify-content: center;
-    }
+  &-jc-c {
+    justify-content: center;
+  }
 
-    &-ai-c {
-        align-items: center;
-    }
+  &-ai-c {
+    align-items: center;
+  }
 }
