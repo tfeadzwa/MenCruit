@@ -10,6 +10,7 @@
   margin: 0.5rem 0;
   border-radius: 0.5rem;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     border: 0.09375rem solid var(--blue-green);
@@ -22,11 +23,11 @@
     border: none;
     padding-left: 1.2rem;
     font-size: 1rem;
-    // transition: all 0.2s ease;
+    transition: all 0.3s ease;
 
     &::placeholder {
       opacity: 0;
-      transition: 0.3s linear;
+      transition: all 0.3s ease-in-out;
       font-size: u.$font-small;
     }
 
@@ -55,6 +56,6 @@
     left: 1.3rem;
     top: 1.2rem;
     font-size: u.$font-small;
-    transition: 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 }
