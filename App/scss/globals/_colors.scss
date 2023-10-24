@@ -1,15 +1,17 @@
 // css custom properties
 :root {
-    --blue-green: hsl(193, 84%, 34%);
-    --dodger-blue: hsl(219, 87%, 56%);
-    --shade-of-blue: hsl(218, 87%, 91%);
-    --dark-cerulean: hsl(221, 71%, 28%);
-    --midnight-express: hsl(221, 76%, 10%);
-    --aqua-blue: hsl(219, 87%, 56%);
-    --old-lace: hsl(39, 100%, 94%);
-    --airforce-blue: hsl(210, 29%, 50%);
-    --azure-mist: hsl(210, 100%, 96%);
-    --white: hsl(0, 0%, 100%);
+  --blue-green: hsl(193, 84%, 34%);
+  --dodger-blue: hsl(219, 87%, 56%);
+  --shade-of-blue: hsl(218, 87%, 91%);
+  --royal-blue: hsl(219, 87%, 56%);
+  --dark-cerulean: hsl(221, 71%, 28%);
+  --midnight-express: hsl(221, 76%, 10%);
+  --aqua-blue: hsl(219, 87%, 56%);
+  --old-lace: hsl(39, 100%, 94%);
+  --airforce-blue: hsl(210, 29%, 50%);
+  --azure-mist: hsl(210, 100%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --silver-sand: hsl(0, 7%, 83%);
 }
 
 $darkCerulean: hsl(221, 71%, 28%);
@@ -24,4 +26,8 @@ $persianGreen: hsl(157, 100%, 34%); //or jade
 $aquaBlue: hsl(219, 87%, 56%); // //shadeofBlue or mizu-iro
 $oldLace: hsl(39, 100%, 94%); //shadeOfWhite - pale cream color
 $airForceBlue: hsl(210, 29%, 50%); // color of sky on clear day
-$azureMist: hsl(210, 100%, 96%); // sky color on cloud day - calmness and tranquility
+$azureMist: hsl(
+  210,
+  100%,
+  96%
+); // sky color on cloud day - calmness and tranquility
