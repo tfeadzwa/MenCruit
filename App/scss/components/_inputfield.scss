@@ -1,0 +1,50 @@
+@use "../util/" as u;
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 3.5rem;
+  border: 0.0625rem solid magenta;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &__text-input {
+    min-width: 100%;
+    height: 50%;
+    padding: 0.5rem 0.5rem 1rem 1.2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+
+    &::placeholder {
+      vertical-align: bottom;
+      opacity: 0;
+      transition: 0.3s linear;
+      font-size: u.$font-small;
+    }
+
+    &:focus,
+    &:valid,
+    &:not(:placeholder-shown) {
+      &::placeholder {
+        opacity: 1;
+      }
+
+      & ~ label {
+        top: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 1.3rem;
+    top: 1.2rem;
+    font-size: u.$font-small;
+    transition: 0.3s ease;
+  }
+}

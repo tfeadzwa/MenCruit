@@ -67,28 +67,47 @@
             <div class="login__seperate"></div>
           </div>
 
-          <div>Log in using email address</div>
+          <div class="login__using-email">Log in using email address</div>
 
-          <form id="login__form">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              required
-            />
+          <form id="login-form" class="login__form">
+            <div class="flex flex-dir-c">
+              <div class="input-field">
+                <input
+                  class="input-field__text-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Type your email"
+                  required
+                />
+                <label for="email" class="input-field__label"
+                  >Email address</label
+                >
+              </div>
+
+              <div class="input-field">
+                <input
+                  class="input-field__text-input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Type your password"
+                  required
+                />
+                <label for="password" class="input-field__label"
+                  >Password</label
+                >
+              </div>
+            </div>
           </form>
 
-          <button type="submit" id="submit">Log In</button>
+          <button class="login__button" type="submit" id="submit">
+            Log In
+          </button>
 
-          <div>Need to create an account <button>signup</button></div>
+          <div class="login__create-account">
+            Need to create an account? <a href="#">Sign Up</a>
+          </div>
         </div>
       </div>
     </div>
