@@ -1,0 +1,12 @@
+@use "sass:math";
+
+// Define sass function to convert px to rem units
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function';
+  }
+}
+
+// Define sass function to convert px to rem units

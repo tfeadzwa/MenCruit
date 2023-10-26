@@ -1,25 +1,53 @@
 @use "../util/" as u;
 
+//ToDo:
+
 .login {
-  background-color: lightblue;
-  height: 100vh;
   position: relative;
+  justify-content: space-between;
+  height: 100vh;
 
   &__logo {
     position: absolute;
-    top: 1.0625rem;
+    top: u.rem(17);
     left: 0.1975rem;
 
     color: var(--dark-cerulean);
   }
 
+  &__text-section {
+    width: min(100%, 40rem);
+
+    // ToDo: use clamp
+    h1,
+    h3 {
+      color: var(--white);
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
   &__form-section {
     position: absolute;
-    top: 5.3125rem;
-    width: min(100% - 1.2rem, 31.25rem);
-    height: 38.4375rem;
     border-radius: 0.5rem;
+    top: 5.3125rem;
+    width: min(100% - 1.2rem, 27rem);
+    height: 38.4375rem;
     background-color: var(--white);
+
+    // center on mobile devices
+    @include u.breakpoints-down(medium) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // reset to default position and adjust height
+    @include u.breakpoints-up(large) {
+      position: static;
+      height: 34.5rem;
+    }
   }
 
   // for padding
@@ -28,10 +56,11 @@
     padding-right: 1rem;
   }
 
+  // ToDo: use the clamp function for font
   &__title {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     text-align: center;
-    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.75rem + 2vw, 2rem);
     font-weight: 700;
     color: var(--dark-cerulean);
   }
