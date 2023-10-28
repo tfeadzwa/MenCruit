@@ -15,7 +15,13 @@
     <link rel="stylesheet" href="/dist/style.css" />
   </head>
 
-  <body style="background-color: var(--dodger-blue)">
+  <body
+    style="
+      background-color: var(--dodger-blue);
+      background-image: url(/app/assets/images/desktop.svg);
+      background-size: contain;
+    "
+  >
     <div class="login container container--pall flex flex-ai-c">
       <div class="login__logo logo">MenCruit</div>
 
@@ -23,8 +29,8 @@
         <!-- ToDo -->
         <h1>Refer a business, get up to $200. It's that easy!</h1>
         <h3>
-          For every company that joins Deel via your referral link, you will get
-          a $200 Amazon Gift Card.
+          For every company that joins MenCruit via your referral link, you will
+          get a $200 PayPal worth of bitcoins.
         </h3>
       </section>
 
@@ -76,7 +82,7 @@
           <div class="login__using-email">Log in using email address</div>
 
           <form id="login-form" class="login__form">
-            <div class="flex flex-dir-c">
+            <div class="login__input-fields flex flex-dir-c">
               <div class="input-field">
                 <input
                   class="input-field__text-input"
@@ -111,7 +117,7 @@
             Log In
           </button>
 
-          <div class="login__create-account">
+          <div class="login__create-account-txt">
             Need to create an account? <a href="#">Sign Up</a>
           </div>
         </div>

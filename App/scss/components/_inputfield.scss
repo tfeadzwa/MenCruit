@@ -24,11 +24,13 @@
     padding-left: 1.2rem;
     font-size: 1rem;
     transition: all 0.3s ease;
+    color: hsl(206, 88%, 3%);
 
     &::placeholder {
       opacity: 0;
       transition: all 0.3s ease-in-out;
-      font-size: u.$font-small;
+      font-size: 0.875rem;
+      color: hsla(0, 0%, 36%, 0.5);
     }
 
     &:focus,
@@ -43,9 +45,10 @@
         opacity: 1;
       }
 
+      // Subsequent-sibling combinator
       & ~ label {
         top: 0.5rem;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 400;
       }
     }
@@ -53,9 +56,10 @@
 
   &__label {
     position: absolute;
-    left: 1.3rem;
+    left: 1.15rem;
     top: 1.2rem;
-    font-size: u.$font-small;
+    font-size: 0.875rem;
     transition: all 0.3s ease-in-out;
+    color: hsl(0, 0%, 36%);
   }
 }

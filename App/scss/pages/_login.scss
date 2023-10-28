@@ -10,30 +10,40 @@
   &__logo {
     position: absolute;
     top: u.rem(17);
-    left: 0.1975rem;
+    left: 0.8125rem;
 
-    color: var(--dark-cerulean);
+    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    // color: var(--dark-cerulean);
+    color: var(--white);
   }
 
+  // login left section
   &__text-section {
-    width: min(100%, 40rem);
+    width: min(100%, 38rem);
 
     // ToDo: use clamp
     h1,
     h3 {
       color: var(--white);
+      margin-top: 1.5rem;
     }
 
     h1 {
       font-size: 3rem;
     }
+
+    h3 {
+      line-height: 150%;
+      font-weight: 400;
+    }
   }
 
+  // login right section
   &__form-section {
     position: absolute;
     border-radius: 0.5rem;
-    top: 5.3125rem;
-    width: min(100% - 1.2rem, 27rem);
+    top: 4.5rem;
+    width: min(100% - 1.5rem, 27rem);
     height: 38.4375rem;
     background-color: var(--white);
 
@@ -69,7 +79,8 @@
     border: 0.12rem solid var(--silver-sand);
     border-radius: 0.5rem;
     width: 100%;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.875rem;
     color: var(--royal-blue);
     background: none;
 
@@ -81,27 +92,24 @@
 
   &__google-icon {
     height: 1.2rem;
-    width: fit-content;
+    width: 1.2rem;
     margin-right: 0.625rem;
-  }
-
-  &__login-text {
   }
 
   &__seperate {
     margin: 2.5rem 0;
-    width: 100%;
-    height: 0.0625rem;
-    background-color: hsl(0, 7%, 60%);
+    width: 50%;
+    height: 0.09375rem; // 1.5px
+    background-color: hsl(207, 6%, 64%); // gray
   }
 
   &__seperate-text {
-    padding: 0 2rem;
-    font-size: u.$font-small;
+    margin: 0 2rem;
+    font-size: 0.875rem;
   }
 
   &__using-email {
-    font-size: u.$font-small;
+    font-size: 0.875rem;
     text-align: center;
   }
 
@@ -110,9 +118,9 @@
     margin-bottom: 1.5rem;
   }
 
-  &__create-account {
+  &__create-account-txt {
     text-align: center;
-    font-size: u.$font-small;
+    font-size: 0.875rem;
     margin-top: 1.5rem;
   }
 }
