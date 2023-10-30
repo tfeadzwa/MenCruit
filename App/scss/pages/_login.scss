@@ -77,16 +77,27 @@
 
   &__button {
     border: 0.12rem solid var(--silver-sand);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     width: 100%;
     font-weight: 500;
     font-size: 0.875rem;
     color: var(--royal-blue);
+    outline: none;
     background: none;
 
+    &:hover {
+      background-color: hsl(219, 91%, 96%);
+      border-color: hsla(211, 100%, 50%, 0.5);
+    }
+
     &:nth-last-of-type(1) {
+      border-color: var(--royal-blue);
       background-color: var(--royal-blue);
       color: var(--white);
+
+      &:hover {
+        background-color: hsl(224, 72%, 53%);
+      }
     }
   }
 
@@ -109,8 +120,10 @@
   }
 
   &__using-email {
-    font-size: 0.875rem;
     text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05;
   }
 
   &__form {
@@ -118,9 +131,32 @@
     margin-bottom: 1.5rem;
   }
 
+  &__forgot-password {
+    color: var(--royal-blue);
+    font-size: 0.875rem;
+    text-align: right;
+    margin-top: 0.1rem;
+    margin-right: 0.75rem;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__create-account-txt {
     text-align: center;
     font-size: 0.875rem;
     margin-top: 1.5rem;
+    font-weight: 500;
+
+    a {
+      color: var(--royal-blue);
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
