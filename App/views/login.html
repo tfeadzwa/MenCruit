@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Hire Young Talent</title>
+    <title>Login to MenCruit</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
     "
   >
     <div class="login container container--pall flex flex-ai-c">
-      <div class="login__logo logo">MenCruit</div>
+      <a class="login__logo logo" href="../views/home.html">MenCruit</a>
 
       <section class="login__text-section hide-for-mobile">
         <!-- ToDo -->
@@ -34,7 +34,7 @@
         </h3>
       </section>
 
-      <div class="login__form-section">
+      <section class="login__form-section">
         <div class="login__form-content">
           <h1 class="login__title">Log in</h1>
           <button type="button" class="login__button flex flex-jc-c flex-ai-c">
@@ -110,7 +110,11 @@
                   >Password</label
                 >
               </div>
-              <a href="#" class="login__forgot-password">Forgot password?</a>
+              <a
+                href="../views/forgot-password.html"
+                class="login__forgot-password"
+                >Forgot password?</a
+              >
             </div>
           </form>
 
@@ -122,7 +126,7 @@
             Need to create an account? <a href="#">Sign Up</a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
