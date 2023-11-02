@@ -1,19 +1,25 @@
-@use '../util' as u;
+@use "../util" as u;
 
 .grid {
-    display: grid;
+  display: grid;
 
-    //include more properties here
+  //include more properties here
 }
 
 .hide-for-mobile {
-    @include u.breakpoints-down(medium) {
-        display: none;
-    }
+  @include u.breakpoints-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-mobile-small {
+  @include u.breakpoints-down(small) {
+    display: none;
+  }
 }
 
 .hide-for-desktop {
-    @include u.breakpoints-up(large) {
-        display: none;
-    }
+  @include u.breakpoints-up(large) {
+    display: none;
+  }
 }

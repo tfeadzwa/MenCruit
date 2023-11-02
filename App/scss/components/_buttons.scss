@@ -1,19 +1,22 @@
 .button,
 button {
-  color: var(--dark-cerulean);
   padding: 0.625rem 0.9375rem;
-  font-weight: 600;
   font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: var(--dark-cerulean);
+  line-height: 150%;
   cursor: pointer;
 }
 
 .cta-button {
-  color: var(--dark-cerulean);
-  background-color: var(--white);
-  padding: 1rem;
   border: 0.0625rem solid rgba(var(--aqua-blue), 0.85);
-  margin: 1.5rem 0;
+  padding: 1rem;
   border-radius: 0.25rem 0.875rem;
+  margin: 1.5rem 0;
+  color: var(--dark-cerulean);
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
   transition: all 0.2s ease-in-out;
 
   &:hover {
