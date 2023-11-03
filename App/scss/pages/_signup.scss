@@ -4,8 +4,79 @@
   height: 100vh;
   background-color: rgb(244, 243, 246);
 
+  .header {
+    height: 5rem;
+
+    @include u.breakpoints-up(semi-large) {
+      background-color: transparent !important;
+
+      :where(a, .button) {
+        color: var(--dark-cerelean);
+      }
+
+      .button {
+        padding: 0.5rem 1.2rem;
+        border: 0.01rem solid var(--royal-blue);
+        border-radius: 0.3rem;
+        font-size: 0.75rem;
+        background-color: hsl(219, 91%, 96%);
+      }
+    }
+
+    @include u.breakpoints-down(semi-large) {
+      :where(a, .button, span) {
+        color: var(--white);
+      }
+
+      .button {
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.3rem;
+        font-size: 0.75rem;
+        color: var(--royal-blue);
+        background-color: hsl(219, 91%, 96%);
+      }
+    }
+
+    span {
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__logo {
+    @include u.breakpoints-down(small) {
+      font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+    }
+  }
+
+  &__login {
+    svg {
+      margin-right: 0.25rem;
+      margin-bottom: 0.2rem;
+      height: 1.12rem;
+      width: 1.12rem;
+      vertical-align: middle;
+      fill: currentColor;
+    }
+
+    .button:not(:last-child) {
+      margin-right: 1rem;
+
+      &:after {
+        content: "";
+        position: relative;
+        left: 1.85rem;
+        top: 0.5rem;
+        display: inline-block;
+        width: 0.125rem;
+        background: var(--white);
+        height: 23px;
+      }
+    }
+  }
+
   &__container {
-    position: absolute;
+    position: fixed;
     top: 3.95rem;
     left: 50%;
     width: min(100%, 36rem);
@@ -16,32 +87,62 @@
     }
   }
 
-  &__images-container {
+  &__side-illustration {
     position: fixed;
-    top: 4.5rem;
+    top: 0;
     left: 0;
     bottom: 0;
-    display: flex;
-    width: 22.5rem;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    max-width: 22.5rem;
+    background-color: hsl(200, 63%, 75%);
 
-    @include u.breakpoints-down(semi-medium) {
+    @include u.breakpoints-down(semi-large) {
       display: none;
     }
   }
 
+  &__side-illustration-content {
+    padding: 2rem 2.5rem 2rem 2rem;
+    margin-top: 4rem;
+
+    :where(h2, h4) {
+      // color: var(--white);
+      line-height: 150%;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  }
+
+  &__side-illustration-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 62%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   &__title {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1rem + 1.5vw, 2rem);
     font-weight: 700;
   }
 
   &__subtitle {
-    margin: 1rem 0;
-    font-size: 0.75rem;
+    margin: 1rem 0 2rem;
+    font-size: 0.875rem;
     font-weight: 400;
   }
 
@@ -60,9 +161,9 @@
       padding-bottom: 0.25rem;
       border: 0.0975rem solid transparent;
       border-radius: 0.25rem;
+      outline: none;
       font-size: 0.875rem;
       font-weight: 500;
-      outline: none;
       color: hsl(204, 4%, 51%);
       background-color: var(--white);
       transition: background-color 0.3s ease;
@@ -73,12 +174,12 @@
         transition: all 0.05s ease;
       }
 
-      &:focus {
-        border-color: var(--royal-blue);
-        // hsla(211, 100%, 50%, 0.5);
-        background-color: hsl(219, 91%, 96%);
-        color: black;
-      }
+      // &:focus {
+      //   border-color: var(--royal-blue);
+      //   // hsla(211, 100%, 50%, 0.5);
+      //   background-color: hsl(219, 91%, 96%);
+      //   color: black;
+      // }
 
       @include u.breakpoints-up(large) {
         padding-top: 0.875rem;
@@ -184,6 +285,7 @@
 
     &__next-button {
       width: 100%;
+      border: none;
       border-radius: 0.25rem;
       color: var(--white);
       font-weight: 500;

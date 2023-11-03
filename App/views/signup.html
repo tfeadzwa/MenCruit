@@ -17,30 +17,54 @@
   <body>
     <div class="signup">
       <header class="header">
-        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+        <nav class="container--pall flex flex-jc-sb flex-ai-c">
           <!-- Left-Section -->
           <div class="header__left-section">
             <!-- logo -->
-            <a href="../views/home.html" class="logo">MenCruit</a>
+            <a href="../views/home.html" class="logo signup__logo">MenCruit</a>
           </div>
 
           <!-- Right-Section -->
           <div class="right-section">
-            <a href="./login.html" target="_parent" class="button btnLogin"
-              >Log In</a
-            >
-            <a href="#" class="button btnSignup">Sign Up</a>
+            <div class="signup__login hide-for-desktop">
+              <a href="#" class="button btn-help hide-for-desktop">
+                <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                  ></path>
+                </svg>
+                Help
+              </a>
+              <a
+                href="./login.html"
+                target="_parent"
+                class="button hide-for-desktop"
+                >Log In</a
+              >
+            </div>
+
+            <div class="hide-for-mobile">
+              <span>Already have an account?</span>
+              <a href="./login.html" target="_parent" class="button">Log In</a>
+            </div>
           </div>
         </nav>
       </header>
 
-      <div class="signup__images-container hide-for-mobile">
-        <div class="signup__image">
-          <img src="/app/assets/images/pick--the-best.jpg" alt="signup image" />
+      <div class="signup__side-illustration hide-for-mobile">
+        <div class="signup__side-illustration-content">
+          <h2 class="">Hire Internationally with complete confidence</h2>
+          <h4>
+            We'll handle your worldwide compliance, payroll, and benefits, so
+            you can fast-track your international expansion.
+          </h4>
+        </div>
+        <div class="signup__side-illustration-image">
+          <img src="/app/assets/icons/employee-icon.svg" alt="signup image" />
         </div>
       </div>
 
-      <main class="signup__container container container--pall">
+      <main class="signup__container container--pall">
         <div class="signup__tabs-container">
           <h1 class="signup__title">How will you use MenCruit?</h1>
           <h3 class="signup__subtitle">Please select an option below.</h3>
