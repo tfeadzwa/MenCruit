@@ -174,17 +174,17 @@
         transition: all 0.05s ease;
       }
 
-      // &:focus {
-      //   border-color: var(--royal-blue);
-      //   // hsla(211, 100%, 50%, 0.5);
-      //   background-color: hsl(219, 91%, 96%);
-      //   color: black;
-      // }
-
       @include u.breakpoints-up(large) {
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
       }
+    }
+
+    .selected {
+      border-color: var(--royal-blue);
+      // hsla(211, 100%, 50%, 0.5);
+      background-color: hsl(219, 91%, 96%);
+      color: black;
     }
 
     &__container {
