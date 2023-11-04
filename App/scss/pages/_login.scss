@@ -12,7 +12,7 @@
     top: u.rem(17);
     left: 0.8125rem;
 
-    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    font-size: clamp(u.$font-24, u.$font-16 + 2vw, u.$font-32);
     // color: var(--dark-cerulean);
     color: var(--white);
   }
@@ -25,14 +25,15 @@
     h1,
     h3 {
       color: var(--white);
-      margin-top: 1.5rem;
+      margin-top: u.$font-24;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: u.$font-48;
     }
 
     h3 {
+      font-size: u.$font-24;
       line-height: 150%;
       font-weight: 400;
     }
@@ -43,7 +44,7 @@
     position: absolute;
     border-radius: 0.5rem;
     top: 4.5rem;
-    width: min(100% - 1.5rem, 27rem);
+    width: min(100% - u.$font-24, 27rem);
     height: 38.4375rem;
     background-color: var(--white);
 
@@ -62,15 +63,15 @@
 
   // for padding
   &__form-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: u.$font-16;
+    padding-right: u.$font-16;
   }
 
   // ToDo: use the clamp function for font
   &__title {
-    margin: 2rem 0;
+    margin: u.$font-32 0;
     text-align: center;
-    font-size: clamp(1.125rem, 0.75rem + 2vw, 2rem);
+    font-size: clamp(u.$font-18, u.$font-12 + 2vw, u.$font-32);
     font-weight: 700;
     color: var(--dark-cerulean);
   }
@@ -80,15 +81,10 @@
     border-radius: 0.25rem;
     width: 100%;
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: u.$font-14;
     color: var(--royal-blue);
     outline: none;
     background: none;
-
-    &:hover {
-      background-color: hsl(219, 91%, 96%);
-      border-color: hsla(211, 100%, 50%, 0.5);
-    }
 
     &:nth-last-of-type(1) {
       border-color: var(--royal-blue);
@@ -115,28 +111,27 @@
   }
 
   &__seperate-text {
-    margin: 0 2rem;
-    font-size: 0.875rem;
+    margin: 0 u.$font-32;
+    font-size: u.$font-14;
   }
 
   &__using-email {
     text-align: center;
-    font-size: 0.875rem;
+    font-size: u.$font-14;
     font-weight: 500;
     letter-spacing: 0.05;
   }
 
   &__form {
-    margin-top: 0.875rem;
-    margin-bottom: 1.5rem;
+    margin-top: u.$font-14;
+    margin-bottom: u.$font-24;
   }
 
   &__forgot-password {
     color: var(--royal-blue);
-    font-size: 0.875rem;
+    font-size: u.$font-14;
     text-align: right;
-    margin-top: 0.1rem;
-    margin-right: 0.75rem;
+    margin-right: u.$font-12;
     font-weight: 500;
 
     &:hover {
@@ -146,8 +141,8 @@
 
   &__create-account-txt {
     text-align: center;
-    font-size: 0.875rem;
-    margin-top: 1.5rem;
+    font-size: u.$font-14;
+    margin-top: u.$font-24;
     font-weight: 500;
 
     a {

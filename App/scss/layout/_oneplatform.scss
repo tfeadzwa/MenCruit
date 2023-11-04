@@ -8,11 +8,11 @@
 
     @include u.breakpoints-up(large) {
       flex-direction: row;
-      gap: 2rem;
+      gap: u.$font-32;
     }
 
     .text-only {
-      margin-bottom: 2rem;
+      margin-bottom: u.$font-32;
 
       @include u.breakpoints-up(large) {
         margin-bottom: 0;
@@ -20,11 +20,11 @@
 
       h2 {
         color: var(--dark-cerulean);
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
+        font-size: u.$font-28;
+        margin-bottom: u.$font-24;
 
         @include u.breakpoints-up(large) {
-          font-size: 3rem;
+          font-size: u.$font-48;
         }
       }
 
@@ -32,14 +32,14 @@
         // font-size: 1.15rem;
         font-weight: 500;
         color: var(--dark-cerulean);
-        margin-bottom: 2rem;
+        margin-bottom: u.$font-32;
         line-height: 1.3;
       }
 
       #button {
         border: 0.0625rem solid var(--dark-cerulean);
-        border-radius: 1rem;
-        padding: 1rem;
+        border-radius: u.$font-16;
+        padding: u.$font-16;
       }
     }
 
@@ -47,25 +47,25 @@
       @include u.breakpoints-up(large) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 0.75rem;
+        margin-top: u.$font-12;
       }
 
       .option {
         padding-right: 0;
 
         &:not(:last-child) {
-          margin-bottom: 1.5rem;
+          margin-bottom: u.$font-24;
         }
 
         @include u.breakpoints-up(large) {
           &:nth-child(odd) {
-            margin-right: 1rem;
+            margin-right: u.$font-16;
           }
         }
 
         &__title {
           color: var(--midnight-express);
-          font-size: 1rem;
+          font-size: u.$font-16;
           font-weight: 700;
           margin-bottom: 0.625rem;
 
@@ -77,7 +77,7 @@
 
         &__description {
           color: var(--dark-cerulean);
-          font-size: 1.12rem;
+          font-size: u.$font-18;
           font-weight: 400;
         }
       }

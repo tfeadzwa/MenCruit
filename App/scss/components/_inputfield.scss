@@ -29,7 +29,7 @@
     &::placeholder {
       opacity: 0;
       transition: all 0.3s ease-in-out;
-      font-size: 0.875rem;
+      font-size: u.$font-14;
       color: hsla(0, 0%, 36%, 0.5);
     }
 
@@ -48,7 +48,7 @@
       // Subsequent-sibling combinator
       & ~ label {
         top: 0.5rem;
-        font-size: 0.75rem;
+        font-size: u.$font-12;
         font-weight: 400;
         cursor: default;
       }
@@ -59,7 +59,7 @@
     position: absolute;
     left: 1.15rem;
     top: 1.2rem;
-    font-size: 0.875rem;
+    font-size: u.$font-14;
     transition: all 0.3s ease-in-out;
     color: hsl(0, 0%, 36%);
     cursor: text;

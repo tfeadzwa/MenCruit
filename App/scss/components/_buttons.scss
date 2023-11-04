@@ -1,7 +1,9 @@
+@use "../util/" as u;
+
 .button,
 button {
   padding: 0.625rem 0.9375rem;
-  font-size: 1rem;
+  font-size: u.$font-16;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: var(--dark-cerulean);
@@ -11,8 +13,8 @@ button {
 
 .cta-button {
   border: 0.0625rem solid rgba(var(--aqua-blue), 0.85);
-  padding: 1rem;
-  border-radius: 0.25rem 0.875rem;
+  padding: u.$font-16;
+  border-radius: 0.25rem u.$font-14;
   margin: 1.5rem 0;
   color: var(--dark-cerulean);
   font-family: "Open Sans", sans-serif;
@@ -23,5 +25,63 @@ button {
     color: var(--white);
     border-color: rgba(var(--aqua-blue), 1);
     background-color: rgba(var(--aqua-blue), 1);
+  }
+}
+
+.button-google {
+  border: 0.0875rem solid var(--silver-sand);
+  border-radius: 0.25rem;
+  width: 100%;
+  font-weight: 500;
+  font-size: u.$font-14;
+  color: var(--royal-blue);
+  outline: none;
+  background: none;
+
+  svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.625rem;
+  }
+
+  &:hover {
+    background-color: hsl(219, 91%, 96%);
+    border-color: hsla(211, 100%, 50%, 0.5);
+  }
+}
+
+.button-blue {
+  border-radius: 0.25rem;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: u.$font-14;
+  color: var(--royal-blue);
+  outline: none;
+  background: none;
+
+  background-color: var(--royal-blue);
+  color: var(--white);
+
+  &:hover {
+    background-color: hsl(224, 72%, 53%);
+  }
+}
+
+// back button
+.button-back {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  margin-top: u.$font-16;
+
+  font-size: u.$font-14;
+  color: var(--royal-blue);
+
+  svg {
+    width: u.$font-16;
+    aspect-ratio: 1;
+    fill: var(--royal-blue);
+    cursor: pointer;
   }
 }

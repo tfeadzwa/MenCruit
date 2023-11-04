@@ -18,7 +18,7 @@ body {
   border: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: u.$font-medium;
+  font-size: u.$font-24;
   font-weight: 400; // replace font here
   background-color: var(--white);
   color: var(--midnight-express);
@@ -27,16 +27,16 @@ body {
 
 .container {
   //sass variables
-  $topLarge: 4rem;
-  $rightLarge: 2rem;
-  $bottomLarge: 4rem;
-  $leftLarge: 2rem;
+  $topLarge: u.$font-64;
+  $rightLarge: u.$font-32;
+  $bottomLarge: u.$font-64;
+  $leftLarge: u.$font-32;
 
   max-width: 84rem;
   margin: 0 auto;
 
   &--pall {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: u.$font-16 u.$font-16 u.$font-16 u.$font-16;
 
     @include u.breakpoints-up(large) {
       padding: $topLarge $rightLarge $bottomLarge $leftLarge;
@@ -45,8 +45,8 @@ body {
 
   // --py
   &--py {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: u.$font-16;
+    padding-bottom: u.$font-16;
 
     @include u.breakpoints-up(large) {
       padding-top: $topLarge;
@@ -56,8 +56,8 @@ body {
 
   // --px
   &--px {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: u.$font-16;
+    padding-left: u.$font-16;
 
     @include u.breakpoints-up(large) {
       padding-right: $rightLarge;
@@ -67,7 +67,7 @@ body {
 
   // --pt
   &--pt {
-    padding-top: 2.5rem;
+    padding-top: u.$font-40;
 
     @include u.breakpoints-up(large) {
       padding-top: $topLarge;
@@ -76,7 +76,7 @@ body {
 
   // --pr
   &--pr {
-    padding-right: 0.75rem;
+    padding-right: u.$font-12;
 
     @include u.breakpoints-up(large) {
       padding-right: $rightLarge;
@@ -85,7 +85,7 @@ body {
 
   // --pb
   &--pb {
-    padding-bottom: 2.5rem;
+    padding-bottom: u.$font-40;
 
     @include u.breakpoints-up(large) {
       padding-bottom: $bottomLarge;
@@ -94,7 +94,7 @@ body {
 
   // --pl
   &--pl {
-    padding-left: 0.75rem;
+    padding-left: u.$font-12;
 
     @include u.breakpoints-up(large) {
       padding-left: $leftLarge;

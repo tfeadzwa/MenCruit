@@ -1,67 +1,67 @@
-@use '../util' as u;
+@use "../util" as u;
 
 .footer {
-    $color: var(--white);
+  $color: var(--white);
 
-    background-color: var(--blue-green);
-    // background-color: hsl(30, 100%, 95%);
-    // background-color: hsl(185, 61%, 56%);
+  background-color: var(--blue-green);
+  // background-color: hsl(30, 100%, 95%);
+  // background-color: hsl(185, 61%, 56%);
 
-    &__container {
-        display: grid;
-        gap: 2rem;
+  &__container {
+    display: grid;
+    gap: 2rem;
 
-        @include u.breakpoints-up(large) {
-            grid-template-columns: repeat(6, 1fr);
-        }
+    @include u.breakpoints-up(large) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__logo {
+    font-size: u.$font-32;
+    color: $color;
+  }
+
+  &__heading {
+    font-size: u.$font-16;
+    color: $color;
+    font-weight: 600;
+  }
+
+  &__menu {
+    margin-top: 0.625rem;
+    color: $color;
+    font-size: u.$font-16;
+    font-weight: 350;
+
+    a {
+      color: $color;
     }
 
-    &__logo {
-        font-size: u.$font-medium-large;
-        color: $color;
+    li {
+      margin-top: 0.3125rem;
+    }
+  }
+
+  &__socials {
+    grid-column: span 2;
+
+    ul {
+      display: flex;
+      margin-top: 1rem;
     }
 
-    &__heading {
-        font-size: u.$font-small;
-        color: $color;
-        font-weight: 600;
+    img {
+      height: 1.5rem;
     }
 
-    &__menu {
-        margin-top: 0.625rem;
-        color: $color;
-        font-size: u.$font-small;
-        font-weight: 350;
-
-        a {
-            color: $color;
-        }
-
-        li {
-            margin-top: 0.3125rem;
-        }
+    li:not(:last-child) {
+      padding-right: 1.5rem;
     }
+  }
 
-    &__socials {
-        grid-column: span 2;
-
-        ul {
-            display: flex;
-            margin-top: 1rem;
-        }
-
-        img {
-            height: 1.5rem;
-        }
-
-        li:not(:last-child) {
-            padding-right: 1.5rem;
-        }
-    }
-
-    &__copyright {
-        margin-top: 1.5rem;
-        font-size: 1rem;
-        color: $color;
-    }
+  &__copyright {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: $color;
+  }
 }
