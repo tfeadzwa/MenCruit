@@ -22,8 +22,7 @@
     width: min(100%, 38rem);
 
     // ToDo: use clamp
-    h1,
-    h3 {
+    :where(h1, h3) {
       color: var(--white);
       margin-top: u.$font-24;
     }
@@ -33,7 +32,7 @@
     }
 
     h3 {
-      font-size: u.$font-24;
+      font-size: 1.42rem;
       line-height: 150%;
       font-weight: 400;
     }

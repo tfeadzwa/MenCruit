@@ -6,6 +6,7 @@
 
   .header {
     height: u.$font-80;
+    background-color: var(--royal-blue);
 
     @include u.breakpoints-up(semi-large) {
       background-color: transparent !important;
