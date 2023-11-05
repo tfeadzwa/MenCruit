@@ -1,9 +1,10 @@
-//ToDo: use dataset
-document.addEventListener("DOMContentLoaded", () => {
-  let tab = document.getElementById("tab-business");
-  tab.click();
-  tab.focus();
-});
+window.onload = () => {
+  const tab = document.getElementById("tab-business");
+  if (tab) {
+    tab.click();
+    tab.focus();
+  }
+};
 
 const sideContent = [
   {
@@ -63,8 +64,6 @@ tabsBtn.forEach((tab, index) => {
   });
 });
 
-let sideIllContent = {};
-
 //sync tab selection with side illustration
 function addSideIllustration(index) {
   // change color, h2, h4, and image content
@@ -74,6 +73,9 @@ function addSideIllustration(index) {
 
   // get side illustration via index
   const ill = sideContent[index];
+
+  // save side illustration to local storage
+  localStorage.setItem("ill", JSON.stringify(ill));
 
   // set background color
   document.querySelector(".side-ill-container").style.backgroundColor =
@@ -90,12 +92,14 @@ function addSideIllustration(index) {
   h4Content.style.color = ill.color;
 
   imgContent.src = ill.imgContent;
-
-  sideIllContent = ill;
 }
 
-document.querySelector("#next-button").addEventListener("click", () => {
-  window.open("/app/views/signup-form.html");
-});
+const nextButton = document.querySelector("#next-button");
 
-export { sideIllContent };
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    window.open("/app/views/signup-form.html", "_parent");
+  });
+}
+
+export { addSideIllustration };
