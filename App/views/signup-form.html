@@ -165,7 +165,6 @@
                   id="preferred-name"
                   name="prefered-name"
                   placeholder=""
-                  required
                 />
                 <label for="text" class="input-field__label"
                   >Preferred name (Optional)</label
@@ -200,18 +199,64 @@
                 >
               </div>
 
-              <div class="input-field">
-                <input
-                  class="input-field__text-input"
-                  type="how-you-head-about-us"
-                  id="how-you-head-about-us"
-                  name="text"
-                  placeholder=""
-                  required
-                />
-                <label for="password" class="input-field__label">
-                  How did you hear about MenCruit?
-                </label>
+              <!-- select field -->
+              <div class="field-select">
+                <button
+                  class="field-select__button"
+                  type="button"
+                  role="combobox"
+                  aria-labelledby="select button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="select-dropdown"
+                >
+                  <span class="field-select__selected-value"
+                    >How did you hear about MenCruit?</span
+                  >
+                </button>
+
+                <ul
+                  class="field-select__list-dropdown"
+                  role="listbox"
+                  id="list-dropdown"
+                >
+                  <li role="option">
+                    <input type="radio" id="company" name="mediator" />
+                    <label for="company">Company</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="employee" name="mediator" />
+                    <label for="business">Employee/Contractor</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="referred" name="mediator" />
+                    <label for="business">Referred/Recommended</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="email-invite" name="mediator" />
+                    <label for="email-invite">Email invite</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="google" name="mediator" />
+                    <label for="google">Google</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="facebook" name="mediator" />
+                    <label for="facebook">Facebook</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="twitter" name="mediator" />
+                    <label for="twitter">Twitter</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="linkedin" name="mediator" />
+                    <label for="linkedin">LinkedIn</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="other" name="mediator" />
+                    <label for="twitter">Other</label>
+                  </li>
+                </ul>
               </div>
 
               <div class="input-field">

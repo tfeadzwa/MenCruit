@@ -1,3 +1,5 @@
+import { sideContent } from "./utils/sideIllustration.mjs";
+
 window.onload = () => {
   const tab = document.getElementById("tab-business");
   if (tab) {
@@ -5,35 +7,6 @@ window.onload = () => {
     tab.focus();
   }
 };
-
-const sideContent = [
-  {
-    color: "var(--white)",
-    bgColor: "rgb(21, 53, 122)",
-    h2Content: "Hire internationally with complete confidence",
-    h4Content:
-      "We'll handle your worldwide compliance, payroll, and benefits, so you can fast-track your international expansion.",
-    imgContent: "/app/assets/icons/business-icon.svg",
-  },
-
-  {
-    color: "var(--dark-cerulean)",
-    bgColor: "rgb(153, 202, 249)",
-    h2Content: "Work anywhere and get paid in any currency",
-    h4Content:
-      "Work compliantly from 150 countries, automate your invoicing, and get paid in any currency, including Crypto.",
-    imgContent: "/app/assets/icons/contractor-icon.svg",
-  },
-
-  {
-    color: "var(--white)",
-    bgColor: "rgb(189, 128, 255)",
-    h2Content: "One place to manage everything",
-    h4Content:
-      "Review your contract, access payslips and manage benefits, time off and more in just one place.",
-    imgContent: "/app/assets/icons/employee-icon.svg",
-  },
-];
 
 const tabsBtn = [...document.querySelectorAll(".tab__button")];
 const tabsContainer = document.querySelectorAll(".tab__container");
@@ -59,6 +32,9 @@ tabsBtn.forEach((tab, index) => {
     // add side illustration
     addSideIllustration(index);
 
+    //update tab tittle
+    localStorage.setItem("index", JSON.stringify(index));
+
     //update previous tab
     prevBtnContext = tab;
   });
@@ -73,9 +49,6 @@ function addSideIllustration(index) {
 
   // get side illustration via index
   const ill = sideContent[index];
-
-  // save side illustration to local storage
-  localStorage.setItem("ill", JSON.stringify(ill));
 
   // set background color
   document.querySelector(".side-ill-container").style.backgroundColor =
@@ -101,5 +74,3 @@ if (nextButton) {
     window.open("/app/views/signup-form.html", "_parent");
   });
 }
-
-export { addSideIllustration };
