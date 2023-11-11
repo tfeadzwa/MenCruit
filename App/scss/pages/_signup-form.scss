@@ -1,6 +1,5 @@
 @use "../util/" as u;
 
-// overriding signup-form and signup them here
 .signup-form {
   &__button-back {
     margin-bottom: u.$font-16;
@@ -37,6 +36,14 @@
 
   .input-field {
     background-color: white;
+  }
+
+  [is-visible] {
+    display: block;
+  }
+
+  [is-visible="false"] {
+    display: none;
   }
 
   &__create-account {

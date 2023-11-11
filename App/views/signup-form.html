@@ -146,6 +146,7 @@
                 />
                 <label for="text" class="input-field__label">First Name</label>
               </div>
+
               <div class="input-field">
                 <input
                   class="input-field__text-input"
@@ -202,7 +203,7 @@
               <!-- select field -->
               <div class="field-select">
                 <button
-                  class="field-select__button"
+                  class="field-select__button select-button"
                   type="button"
                   role="combobox"
                   aria-labelledby="select button"
@@ -210,56 +211,69 @@
                   aria-expanded="false"
                   aria-controls="select-dropdown"
                 >
-                  <span class="field-select__selected-value"
+                  <span class="field-select__selected-value selected-value"
                     >How did you hear about MenCruit?</span
                   >
+                  <svg
+                    class="arrow-icon"
+                    height="24"
+                    width="24"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="var(--royal-blue)"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    ></path>
+                  </svg>
                 </button>
 
                 <ul
-                  class="field-select__list-dropdown"
+                  class="field-select__dropdown dropdown-menu"
                   role="listbox"
                   id="list-dropdown"
                 >
-                  <li role="option">
+                  <li class="field-select__dropdown-item" role="option">
                     <input type="radio" id="company" name="mediator" />
                     <label for="company">Company</label>
                   </li>
-                  <li role="option">
+                  <li class="field-select__dropdown-item" role="option">
                     <input type="radio" id="employee" name="mediator" />
-                    <label for="business">Employee/Contractor</label>
+                    <label for="employee">Employee/Contractor</label>
                   </li>
-                  <li role="option">
+                  <li class="field-select__dropdown-item" role="option">
                     <input type="radio" id="referred" name="mediator" />
-                    <label for="business">Referred/Recommended</label>
+                    <label for="referred">Referred/Recommended</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="email-invite" name="mediator" />
                     <label for="email-invite">Email invite</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="google" name="mediator" />
                     <label for="google">Google</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="facebook" name="mediator" />
                     <label for="facebook">Facebook</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="twitter" name="mediator" />
                     <label for="twitter">Twitter</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="linkedin" name="mediator" />
                     <label for="linkedin">LinkedIn</label>
                   </li>
-                  <li role="option">
+                  <li role="option" class="field-select__dropdown-item">
                     <input type="radio" id="other" name="mediator" />
-                    <label for="twitter">Other</label>
+                    <label for="other">Other</label>
                   </li>
                 </ul>
               </div>
 
-              <div class="input-field">
+              <div class="input-field field-explain" is-visible="false">
                 <input
                   class="input-field__text-input"
                   type="how-you-head-about-us"
@@ -291,6 +305,7 @@
       </div>
     </div>
 
-    <script type="module" src="/app/js/signup-form.js"></script>
+    <script type="module" src="../js/signup-form.js"></script>
+    <script src="../js/utils/selectField.mjs"></script>
   </body>
 </html>
