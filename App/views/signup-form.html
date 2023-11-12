@@ -200,11 +200,12 @@
                 >
               </div>
 
-              <!-- select field -->
-              <div class="field-select">
+              <!-- select field: mediator -->
+              <div class="field-select signup-form__mediator">
                 <button
                   class="field-select__button select-button"
                   type="button"
+                  title="Select"
                   role="combobox"
                   aria-labelledby="select button"
                   aria-haspopup="listbox"
@@ -273,6 +274,83 @@
                 </ul>
               </div>
 
+              <!-- select field: source-->
+              <div
+                class="field-select signup-form__source field-source"
+                is-visible="false"
+              >
+                <button
+                  class="field-select__button select-button"
+                  type="button"
+                  title="Select"
+                  role="combobox"
+                  aria-labelledby="select button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="select-dropdown"
+                >
+                  <span class="field-select__selected-value selected-value"
+                    >Source</span
+                  >
+                  <svg
+                    class="arrow-icon"
+                    height="24"
+                    width="24"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="var(--royal-blue)"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <ul
+                  class="field-select__dropdown dropdown-menu"
+                  role="listbox"
+                  id="list-dropdown"
+                >
+                  <li class="field-select__dropdown-item" role="option">
+                    <input type="radio" id="hr-services" name="mediator" />
+                    <label for="hr-services">HR Services</label>
+                  </li>
+                  <li class="field-select__dropdown-item" role="option">
+                    <input
+                      type="radio"
+                      id="financial-services"
+                      name="mediator"
+                    />
+                    <label for="financial-services"
+                      >Financial Services (Accounting firm/Fractional
+                      CF0)</label
+                    >
+                  </li>
+                  <li class="field-select__dropdown-item" role="option">
+                    <input type="radio" id="vc" name="mediator" />
+                    <label for="vc">VC</label>
+                  </li>
+                  <li role="option" class="field-select__dropdown-item">
+                    <input type="radio" id="tech-company" name="mediator" />
+                    <label for="tech-company">Another Tech Company</label>
+                  </li>
+                  <li role="option" class="field-select__dropdown-item">
+                    <input type="radio" id="recruiter" name="mediator" />
+                    <label for="recruiter">Recruiter</label>
+                  </li>
+                  <li role="option" class="field-select__dropdown-item">
+                    <input type="radio" id="y-combinator" name="mediator" />
+                    <label for="y-combinator">Y Combinator</label>
+                  </li>
+                  <li role="option" class="field-select__dropdown-item">
+                    <input type="radio" id="others" name="mediator" />
+                    <label for="others">Other</label>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- input field: Explain -->
               <div class="input-field field-explain" is-visible="false">
                 <input
                   class="input-field__text-input"

@@ -38,6 +38,10 @@
     background-color: white;
   }
 
+  &__source {
+    z-index: 1000;
+  }
+
   [is-visible] {
     display: block;
   }

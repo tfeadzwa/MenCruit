@@ -41,20 +41,19 @@ optionsList.forEach((option) => {
 function checkSelectedOption() {
   const selected = document.querySelector(".selected-value").textContent.trim();
   const explainField = document.querySelector(".field-explain");
-  // const sourceField = document.querySelector(".field-source");
+  const sourceField = document.querySelector(".field-source");
 
-  // display Others field
+  // display Others input field
   if (selected === "Other") {
     explainField.setAttribute("is-visible", "true");
   } else {
     explainField.setAttribute("is-visible", "false");
   }
 
-  // ToDo: display Referred field
+  // display source select field
   if (selected === "Referred/Recommended") {
-    // const sourceField = document.querySelector(".field-source");
-    // sourceField.setAttribute("is-visible", "true");
+    sourceField.setAttribute("is-visible", "true");
   } else {
-    // sourceField.setAttribute("is-visible", "false");
+    sourceField.setAttribute("is-visible", "false");
   }
 }
