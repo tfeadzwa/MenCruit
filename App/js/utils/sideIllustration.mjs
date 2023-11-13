@@ -1,6 +1,6 @@
 export const sideContent = [
   {
-    title: "Business",
+    title: "Sign up as a Business",
     color: "var(--white)",
     bgColor: "rgb(21, 53, 122)",
     h2Content: "Hire internationally with complete confidence",
@@ -10,7 +10,7 @@ export const sideContent = [
   },
 
   {
-    title: "Contractor",
+    title: "Sign up as a Contractor",
     color: "var(--dark-cerulean)",
     bgColor: "rgb(153, 202, 249)",
     h2Content: "Work anywhere and get paid in any currency",
@@ -20,7 +20,7 @@ export const sideContent = [
   },
 
   {
-    title: "Employee",
+    title: "Sign up as an Employee",
     color: "var(--white)",
     bgColor: "rgb(189, 128, 255)",
     h2Content: "One place to manage everything",

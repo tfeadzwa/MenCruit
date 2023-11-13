@@ -6,7 +6,10 @@ const index = JSON.parse(localStorage.getItem("index"));
 addSideIllustration();
 
 function addSideIllustration() {
-  // change color, h2, h4, and image content
+  // get reference to title element
+
+  // assign color, h2, h4, and image content to side illustration
+  const title = document.querySelector(".signup__title");
 
   const sideIllContainer = document.querySelector(".side-ill-container");
   const signupLogo = document.querySelector(".signup__logo");
@@ -15,6 +18,9 @@ function addSideIllustration() {
   const imgContent = document.querySelector(".img-content");
 
   const ill = sideContent[index];
+
+  // add title
+  title.textContent = ill.title;
 
   sideIllContainer.style.backgroundColor = ill.bgColor;
   signupLogo.style.color = ill.color;
