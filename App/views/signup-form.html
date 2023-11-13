@@ -201,7 +201,7 @@
               </div>
 
               <!-- select field: mediator -->
-              <div class="field-select signup-form__mediator">
+              <div class="field-select field-mediator signup-form__mediator">
                 <button
                   class="field-select__button select-button"
                   type="button"
@@ -210,7 +210,7 @@
                   aria-labelledby="select button"
                   aria-haspopup="listbox"
                   aria-expanded="false"
-                  aria-controls="select-dropdown"
+                  aria-controls="dropdown-menu"
                 >
                   <span class="field-select__selected-value selected-value"
                     >How did you hear about MenCruit?</span
@@ -276,7 +276,7 @@
 
               <!-- select field: source-->
               <div
-                class="field-select signup-form__source field-source"
+                class="field-select field-source signup-form__source"
                 is-visible="false"
               >
                 <button
@@ -313,38 +313,34 @@
                   id="list-dropdown"
                 >
                   <li class="field-select__dropdown-item" role="option">
-                    <input type="radio" id="hr-services" name="mediator" />
+                    <input type="radio" id="hr-services" name="source" />
                     <label for="hr-services">HR Services</label>
                   </li>
                   <li class="field-select__dropdown-item" role="option">
-                    <input
-                      type="radio"
-                      id="financial-services"
-                      name="mediator"
-                    />
+                    <input type="radio" id="financial-services" name="source" />
                     <label for="financial-services"
                       >Financial Services (Accounting firm/Fractional
                       CF0)</label
                     >
                   </li>
                   <li class="field-select__dropdown-item" role="option">
-                    <input type="radio" id="vc" name="mediator" />
+                    <input type="radio" id="vc" name="source" />
                     <label for="vc">VC</label>
                   </li>
                   <li role="option" class="field-select__dropdown-item">
-                    <input type="radio" id="tech-company" name="mediator" />
+                    <input type="radio" id="tech-company" name="source" />
                     <label for="tech-company">Another Tech Company</label>
                   </li>
                   <li role="option" class="field-select__dropdown-item">
-                    <input type="radio" id="recruiter" name="mediator" />
+                    <input type="radio" id="recruiter" name="source" />
                     <label for="recruiter">Recruiter</label>
                   </li>
                   <li role="option" class="field-select__dropdown-item">
-                    <input type="radio" id="y-combinator" name="mediator" />
+                    <input type="radio" id="y-combinator" name="source" />
                     <label for="y-combinator">Y Combinator</label>
                   </li>
                   <li role="option" class="field-select__dropdown-item">
-                    <input type="radio" id="others" name="mediator" />
+                    <input type="radio" id="others" name="source" />
                     <label for="others">Other</label>
                   </li>
                 </ul>

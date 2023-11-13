@@ -3,7 +3,6 @@
 .field-select {
   position: relative;
   min-width: 100%;
-  z-index: 1001;
   margin: 0.5rem 0;
   border-radius: 0.5rem;
   background-color: var(--white);
@@ -31,13 +30,14 @@
 
   &__dropdown {
     position: absolute;
+    bottom: 4rem;
     margin-top: 0.5rem;
     list-style: none;
     width: 100%;
     background-color: var(--white);
     border-radius: 0.25rem;
     padding: u.$font-12;
-    max-height: 15.625rem;
+    max-height: 18rem;
     overflow-y: auto;
     border: 0.025rem solid blue;
     transition: 0.5s ease;
@@ -97,6 +97,7 @@
 
   &__active {
     border-color: var(--royal-blue);
+    z-index: 1001;
 
     .arrow-icon {
       transform: rotate(180deg);
