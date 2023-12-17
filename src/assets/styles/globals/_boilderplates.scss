@@ -1,0 +1,98 @@
+@use "../utils/" as u;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  border: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  //sass variables
+  $topLarge: u.$font-64;
+  $rightLarge: u.$font-32;
+  $bottomLarge: u.$font-64;
+  $leftLarge: u.$font-32;
+
+  max-width: 84rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding: u.$font-16 u.$font-16 u.$font-16 u.$font-16;
+
+    @include u.breakpoints-up(large) {
+      padding: $topLarge $rightLarge $bottomLarge $leftLarge;
+    }
+  }
+
+  // --py
+  &--py {
+    padding-top: u.$font-16;
+    padding-bottom: u.$font-16;
+
+    @include u.breakpoints-up(large) {
+      padding-top: $topLarge;
+      padding-bottom: $bottomLarge;
+    }
+  }
+
+  // --px
+  &--px {
+    padding-right: u.$font-16;
+    padding-left: u.$font-16;
+
+    @include u.breakpoints-up(large) {
+      padding-right: $rightLarge;
+      padding-left: $leftLarge;
+    }
+  }
+
+  // --pt
+  &--pt {
+    padding-top: u.$font-40;
+
+    @include u.breakpoints-up(large) {
+      padding-top: $topLarge;
+    }
+  }
+
+  // --pr
+  &--pr {
+    padding-right: u.$font-12;
+
+    @include u.breakpoints-up(large) {
+      padding-right: $rightLarge;
+    }
+  }
+
+  // --pb
+  &--pb {
+    padding-bottom: u.$font-40;
+
+    @include u.breakpoints-up(large) {
+      padding-bottom: $bottomLarge;
+    }
+  }
+
+  // --pl
+  &--pl {
+    padding-left: u.$font-12;
+
+    @include u.breakpoints-up(large) {
+      padding-left: $leftLarge;
+    }
+  }
+}
