@@ -1,0 +1,273 @@
+[
+  {
+    "title": "Platform",
+    "menu": [
+      {
+        "iconSrc": "src/assets/images/general/hire-anywhere.svg",
+        "menuTitle": "Hire Anywhere",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "EOR",
+            "description": "Hire employees abroad"
+          },
+          {
+            "link": "#",
+            "title": "Contractor",
+            "description": "Hire contractors globally"
+          },
+          {
+            "link": "#",
+            "title": "Shield",
+            "description": "Hire contractors globally"
+          },
+          {
+            "link": "#",
+            "title": "Immigration",
+            "description": "Get visa support worldwide"
+          },
+          {
+            "link": "#",
+            "title": "Background checks",
+            "description": "Run complient checks globally"
+          }
+        ]
+      },
+      {
+        "iconSrc": "src/assets/images/general/manage-your-team.svg",
+        "menuTitle": "Manage Your Team",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "MenCruit HR",
+            "description": "Manage your whole workforce through MenCruit"
+          },
+          {
+            "link": "#",
+            "title": "Engage",
+            "description": "Slack plugins that let your team stay productive and engaged"
+          },
+          {
+            "link": "#",
+            "title": "Equipment",
+            "description": "Equip your global team"
+          },
+          {
+            "link": "#",
+            "title": "Equity",
+            "description": "Provide global teams with equity"
+          },
+          {
+            "link": "#",
+            "title": "Workspaces",
+            "description": "Flexible workspaces anywhere"
+          },
+          {
+            "link": "#",
+            "title": "Intergrations",
+            "description": "Automate your HR workflow"
+          },
+          {
+            "link": "#",
+            "title": "API",
+            "description": "Supercharge your product and processes"
+          }
+        ]
+      },
+      {
+        "iconSrc": "src/assets/images/general/pay-globally.svg",
+        "menuTitle": "Pay Globally",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Payroll",
+            "description": "Run payroll in 100+ countries"
+          },
+          {
+            "link": "#",
+            "title": "PEO",
+            "description": "Manage payroll, benefits, and HR for US teams"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Companies",
+    "menu": [
+      {
+        "iconSrc": "src/assets/images/general/business-size.svg",
+        "menuTitle": "Business Size",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Startup",
+            "description": "Get started on the right foot by complicantly hiring globally"
+          },
+          {
+            "link": "#",
+            "title": "Enterprise",
+            "description": "Effortlessly plug MenCruit into your existing workflows"
+          }
+        ]
+      },
+      {
+        "iconSrc": "src/assets/images/general/solutions.svg",
+        "menuTitle": "Solutions",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Stay Complient",
+            "description": "Put your mind at ease"
+          },
+          {
+            "link": "#",
+            "title": "Run Global Payroll",
+            "description": "Run payroll in 100+ countries"
+          },
+          {
+            "link": "#",
+            "title": "Industries",
+            "description": "Stay at the forefront regardless of your industry"
+          }
+        ]
+      },
+      {
+        "iconSrc": "src/assets/images/general/for-teams.svg",
+        "menuTitle": "For Teams",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Finance teams",
+            "description": "Save hours on admin and payroll"
+          },
+          {
+            "link": "#",
+            "title": "Legal teams",
+            "description": "Hire abroad without legal admin"
+          },
+          {
+            "link": "#",
+            "title": "Hiring Managers",
+            "description": "Hit your hiring targets faster"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Resources",
+    "menu": [
+      {
+        "iconSrc": "src/assets/images/general/business-size.svg",
+        "menuTitle": "Benefits",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "About us",
+            "description": "Everything you'd want to know"
+          },
+          {
+            "link": "#",
+            "title": "Compare competitors",
+            "description": "Why choose MenCruit"
+          }
+        ]
+      },
+      {
+        "iconSrc": "",
+        "menuTitle": "",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Case Studies",
+            "description": "How we help other companies"
+          },
+          {
+            "link": "#",
+            "title": "Solutions",
+            "description": "Enhance your global growth"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pricing",
+    "menu": [
+      {
+        "iconSrc": "src/assets/images/general/business-size.svg",
+        "menuTitle": "Benefits",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "About us",
+            "description": "Everything you'd want to know"
+          },
+          {
+            "link": "#",
+            "title": "Compare competitors",
+            "description": "Why choose MenCruit"
+          }
+        ]
+      },
+      {
+        "iconSrc": "",
+        "menuTitle": "",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Case Studies",
+            "description": "How we help other companies"
+          },
+          {
+            "link": "#",
+            "title": "Solutions",
+            "description": "Enhance your global growth"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "About us",
+    "menu": [
+      {
+        "iconSrc": "src/assets/images/general/business-size.svg",
+        "menuTitle": "Benefits",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "About us",
+            "description": "Everything you'd want to know"
+          },
+          {
+            "link": "#",
+            "title": "Compare competitors",
+            "description": "Why choose MenCruit"
+          }
+        ]
+      },
+      {
+        "iconSrc": "",
+        "menuTitle": "",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Case Studies",
+            "description": "How we help other companies"
+          },
+          {
+            "link": "#",
+            "title": "Solutions",
+            "description": "Enhance your global growth"
+          }
+        ]
+      }
+    ]
+  }
+]
