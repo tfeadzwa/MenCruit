@@ -27,7 +27,7 @@ const Header = () => {
                 <li
                   key={index}
                   onMouseEnter={() => handleMouseEnter(index)}
-                  // onMouseLeave={() => handleMouseLeave()}
+                  onMouseLeave={() => handleMouseLeave()}
                 >
                   {menuItem.title} <SVGIcon />
                   {showDropdown === index && (

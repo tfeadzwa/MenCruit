@@ -161,34 +161,77 @@
     "title": "Resources",
     "menu": [
       {
-        "iconSrc": "src/assets/images/general/business-size.svg",
-        "menuTitle": "Benefits",
+        "iconSrc": "src/assets/images/general/hiring-guides.svg",
+        "menuTitle": "Hiring Tools",
         "subMenuItems": [
           {
             "link": "#",
-            "title": "About us",
-            "description": "Everything you'd want to know"
+            "title": "Global Hiring Guide",
+            "description": "Learn about the best practices of hiring from remote countries"
           },
           {
             "link": "#",
-            "title": "Compare competitors",
-            "description": "Why choose MenCruit"
+            "title": "Global Hiring Toolkit",
+            "description": "Cost calculators, salary insights and more"
           }
         ]
       },
+
       {
-        "iconSrc": "",
-        "menuTitle": "",
+        "iconSrc": "src/assets/images/general/global-hiring-insights.svg",
+        "menuTitle": "Learn & Connect",
         "subMenuItems": [
           {
             "link": "#",
-            "title": "Case Studies",
-            "description": "How we help other companies"
+            "title": "Blog",
+            "description": "Stay up-to-date with Deel news"
           },
           {
             "link": "#",
-            "title": "Solutions",
-            "description": "Enhance your global growth"
+            "title": "MenCruit AI",
+            "description": "Get global HR insights fast with AI"
+          },
+          {
+            "link": "#",
+            "title": "Video Library",
+            "description": "Explore our collection of video tutorials"
+          },
+          {
+            "link": "#",
+            "title": "Webinars",
+            "description": "Industry insights and product tips"
+          },
+          {
+            "link": "#",
+            "title": "Events",
+            "description": "Join us for global hiring expertise from industry leaders"
+          },
+          {
+            "link": "#",
+            "title": "Resources Library",
+            "description": ""
+          },
+          {
+            "link": "#",
+            "title": "Glossary",
+            "description": ""
+          },
+          {
+            "link": "#",
+            "title": "Partner Program",
+            "description": ""
+          }
+        ]
+      },
+
+      {
+        "iconSrc": "src/assets/images/general/help-support.svg",
+        "menuTitle": "Product Help",
+        "subMenuItems": [
+          {
+            "link": "#",
+            "title": "Help Center",
+            "description": "Questions and answers"
           }
         ]
       }
