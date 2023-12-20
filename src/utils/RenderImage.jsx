@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-// Logo component for displaying a single logo
-const Logo = ({ src, alt }) => {
+// component for displaying a single logo
+const RenderImage = ({ src, alt }) => {
   return <img src={src} alt={alt} />;
 };
 
-Logo.propTypes = {
+RenderImage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 };
 
-export default Logo;
+export default RenderImage;

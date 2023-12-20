@@ -1,6 +1,7 @@
 import {
   Header,
   Hero,
+  Platform,
   HrTools,
   Benefits,
   GetStarted,
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <Header />
       <Hero />
+      <Platform />
       <HrTools />
       <Benefits />
       <GetStarted />
