@@ -1,13 +1,14 @@
 // import onePlatform from "../../assets/images/general/one-platform-image.png";
 import options from "./optionsData.json";
+import PlatformImage from "./PlatformImage";
 
-const oneplatform = () => {
+const OnePlatform = () => {
   return (
-    <section className="oneplatform">
-      <div className="oneplatform__section container container--px container--py flex">
-        <div className="text-only">
+    <section className="one-platform" style={{ paddingTop: 2 + "rem" }}>
+      <div className="one-platform__section container container--px container--pt flex">
+        <div className="one-platform__left-section">
           <h2>
-            Mencruit&#39;s the only HR platform with everything you need, for
+            MenCruit&#39;s the only HR platform with everything you need, for
             everyone.
           </h2>
           <p>
@@ -15,27 +16,33 @@ const oneplatform = () => {
             don&#39;t need to think twice. Whether you want to hire contractors
             and employees worldwide without opening legal entities, streamline
             HR for your global team, or consolidate payroll for everyone
-            —Mencruit does it all (while keeping you compliant).
+            —MenCruit does it all (while keeping you compliant).
           </p>
           <button id="button">Request Demo</button>
         </div>
+
+        <div className="one-platform__right-section">
+          <PlatformImage />
+        </div>
       </div>
 
-      <div className="text-icon">
-        <div className="option">
-          {options.map((option) => (
-            <>
-              <div className="option__title">
+      <div className="one-platform__bottom-section container container--px container--py">
+        {options.map((option) => (
+          <>
+            <div className="one-platform__option">
+              <div className="one-platform__option-image">
                 <img src={option.src} alt={option.alt} />
-                {options.title}
               </div>
-              <div className="option__description">{option.description}</div>
-            </>
-          ))}
-        </div>
+              <div className="one-platform__option-title">{option.title}</div>
+              <div className="one-platform__option-description">
+                {option.description}
+              </div>
+            </div>
+          </>
+        ))}
       </div>
     </section>
   );
 };
 
-export default oneplatform;
+export default OnePlatform;

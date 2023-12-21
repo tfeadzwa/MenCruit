@@ -1,0 +1,43 @@
+{
+  "menu1": [
+    {
+      "title": "Contracts",
+      "iconSrc": "src/assets/images/general/contracts.svg",
+      "iconAlt": "contracts"
+    },
+    {
+      "title": "Transactions",
+      "iconSrc": "src/assets/images/general/transactions.svg",
+      "iconAlt": "transactions"
+    },
+    {
+      "title": "Team Settings",
+      "iconSrc": "src/assets/images/general/team-settings.svg",
+      "iconAlt": "team settings"
+    }
+  ],
+
+  "menu2": [
+    {
+      "pnSrc": "src/assets/images/general/person-zim.webp",
+      "title": "Mike Jonga",
+      "pnAlt": "eng person",
+      "flagSrc": "src/assets/images/general/flag-zim.png",
+      "flagAlt": "zim flag"
+    },
+    {
+      "pnSrc": "src/assets/images/general/person-sa.webp",
+      "title": "Isaac Twut",
+      "pnAlt": "zim person",
+      "flagSrc": "src/assets/images/general/flag-sa.png",
+      "flagAlt": "sa flag"
+    },
+    {
+      "pnSrc": "src/assets/images/general/person-eng.webp",
+      "title": "Alma Sweet",
+      "pnAlt": "sa person",
+      "flagSrc": "src/assets/images/general/flag-england.png",
+      "flagAlt": "england flag"
+    }
+  ]
+}

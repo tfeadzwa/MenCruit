@@ -1,0 +1,79 @@
+@use "../utils" as u;
+
+.one-platform {
+  //   background-color: hsl(208.42, 90.48%, 95.88%);
+
+  &__section {
+    flex-direction: column;
+
+    @include u.breakpoints-up(large) {
+      flex-direction: row;
+      gap: u.$font-32;
+    }
+  }
+
+  &__left-section {
+    margin-bottom: u.$font-32;
+
+    @include u.breakpoints-up(large) {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--dark-cerulean);
+      font-size: u.$font-28;
+      margin-bottom: u.$font-24;
+
+      @include u.breakpoints-up(large) {
+        font-size: u.$font-48;
+      }
+    }
+
+    p {
+      font-size: u.$font-18;
+      //   color: var(--dark-cerulean);
+      margin-bottom: u.$font-32;
+      line-height: 1.65;
+    }
+
+    #button {
+      border: 0.0625rem solid var(--dark-cerulean);
+      border-radius: u.$font-16;
+      padding: u.$font-16;
+    }
+  }
+
+  &__bottom-section {
+    gap: 1rem;
+
+    @include u.breakpoints-up(large) {
+      display: flex;
+      margin-top: u.$font-12;
+    }
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 0;
+
+    @include u.breakpoints-up(large) {
+      &:nth-child(odd) {
+        margin-right: u.$font-16;
+      }
+    }
+  }
+
+  &__option-title {
+    color: var(--dark-cerulean);
+    font-size: u.$font-18;
+  }
+
+  &__option-description {
+    font-size: u.$font-14;
+    font-weight: 300;
+    line-height: 1.65;
+    letter-spacing: 0.01rem;
+  }
+}

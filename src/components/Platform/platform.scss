@@ -1,0 +1,100 @@
+.platform-image {
+  font-size: 0.75rem;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__menus {
+    position: relative;
+    width: 34rem;
+    text-align: end;
+  }
+
+  &__image {
+    max-height: 29rem;
+    border-radius: 0.75rem;
+  }
+
+  &__menu1,
+  &__menu2 {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px 4px 4px 1px;
+
+    > div {
+      display: flex;
+      padding: 0.5rem;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    img {
+      padding: 0.625rem;
+      border-radius: 50%;
+      background: hsl(221, 100%, 96%);
+    }
+  }
+
+  &__menu1 {
+    top: -2rem;
+    left: 3rem;
+  }
+
+  &__menu2 {
+    bottom: 2.5rem;
+    left: 0.5rem;
+
+    img {
+      max-height: 3.5rem;
+      aspect-ratio: 1;
+      padding: 0.25rem;
+    }
+  }
+
+  &__person {
+    width: 2.25rem;
+    aspect-ratio: 1;
+  }
+
+  &__div-span {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  &__menu2 &__div-span {
+    span:nth-child(2) {
+      width: 50%;
+    }
+  }
+
+  &__menu1,
+  &__menu2 {
+    span {
+      display: block;
+      height: 0.345rem;
+      max-width: 4rem;
+      margin-top: 0.25rem;
+      background-color: hsl(220, 91%, 95%);
+    }
+  }
+
+  &__div-span-image {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    span {
+      margin-top: 0;
+      width: 3rem;
+    }
+
+    img {
+      height: 24px;
+      aspect-ratio: 1;
+    }
+  }
+}
