@@ -2,7 +2,7 @@ import {
   Header,
   Hero,
   Platform,
-  HrTools,
+  Hrtools,
   Benefits,
   GetStarted,
   Footer,
@@ -14,7 +14,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Platform />
-      <HrTools />
+      <Hrtools />
       <Benefits />
       <GetStarted />
       <Footer />

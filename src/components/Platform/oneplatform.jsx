@@ -1,8 +1,24 @@
-// import onePlatform from "../../assets/images/general/one-platform-image.png";
 import options from "./optionsData.json";
 import PlatformImage from "./PlatformImage";
+import { useState, useEffect } from "react";
 
 const OnePlatform = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth < 600);
+      setIsSmallScreen(window.innerWidth < 600);
+    };
+
+    window.addEventListener("resize", handleResize());
+
+    // cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize());
+    };
+  }, []);
+
   return (
     <section className="one-platform" style={{ paddingTop: 2 + "rem" }}>
       <div className="one-platform__section container container--px container--pt flex">
@@ -22,13 +38,18 @@ const OnePlatform = () => {
         </div>
 
         <div className="one-platform__right-section">
-          <PlatformImage />
+          {/* <div className="one-platform__small-screen-img"></div> */}
+          {isSmallScreen ? (
+            <div className="one-platform__small-screen-img"></div>
+          ) : (
+            <PlatformImage />
+          )}
         </div>
       </div>
 
       <div className="one-platform__bottom-section container container--px container--py">
-        {options.map((option) => (
-          <>
+        {options.map((option, index) => (
+          <div key={index}>
             <div className="one-platform__option">
               <div className="one-platform__option-image">
                 <img src={option.src} alt={option.alt} />
@@ -38,7 +59,7 @@ const OnePlatform = () => {
                 {option.description}
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </section>
