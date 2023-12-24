@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const HrTools = () => {
   const cards = [
     {
@@ -39,6 +41,63 @@ const HrTools = () => {
       title: "Automate any process and sync data with advanced",
     },
   ];
+
+  useEffect(() => {
+    const horizontalScroll = () => {
+      const scrollImages = document.querySelector(".hrtools__cards-container");
+      const scrollLength = scrollImages.scrollWidth - scrollImages.clientWidth;
+      const leftButton = document.querySelector(".hrtools__left-arrow");
+      const rightButton = document.querySelector(".hrtools__right-arrow");
+
+      const checkScroll = () => {
+        const currentScroll = scrollImages.scrollLeft;
+        if (currentScroll === 0) {
+          leftButton.setAttribute("disabled", "true");
+          rightButton.removeAttribute("disabled");
+        } else if (currentScroll === scrollLength) {
+          rightButton.setAttribute("disabled", "true");
+          leftButton.removeAttribute("disabled");
+        } else {
+          leftButton.removeAttribute("disabled");
+          rightButton.removeAttribute("disabled");
+        }
+      };
+
+      scrollImages.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+
+      const leftScroll = () => {
+        scrollImages.scrollBy({
+          left: -320,
+          behavior: "smooth",
+        });
+      };
+
+      const rightScroll = () => {
+        scrollImages.scrollBy({
+          left: 320,
+          behavior: "smooth",
+        });
+      };
+
+      leftButton.addEventListener("click", leftScroll);
+      rightButton.addEventListener("click", rightScroll);
+    };
+
+    horizontalScroll();
+
+    // Cleanup: Remove event listeners when the component unmounts
+    return () => {
+      const scrollImages = document.querySelector(".hrtools__cards-container");
+      const leftButton = document.querySelector(".hrtools__left-arrow");
+      const rightButton = document.querySelector(".hrtools__right-arrow");
+
+      scrollImages.removeEventListener("scroll", horizontalScroll);
+      window.removeEventListener("resize", horizontalScroll);
+      leftButton.removeEventListener("click", horizontalScroll);
+      rightButton.removeEventListener("click", horizontalScroll);
+    };
+  }, []); // Run this effect only once when the component mounts
 
   return (
     <section className="hrtools container container--pall">
