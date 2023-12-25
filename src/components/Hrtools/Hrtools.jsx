@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const HrTools = () => {
+  const scrollCardsRef = useRef(null);
+  const leftButtonRef = useRef(null);
+  const rightButtonRef = useRef(null);
+
   const cards = [
     {
       backgroundColor: "#0e81a0",
@@ -15,7 +19,7 @@ const HrTools = () => {
 
     {
       backgroundColor: "",
-      imageUrl: "src/assets/images/general/equipment.svg)",
+      imageUrl: "src/assets/images/general/equipment.svg",
       title: "Send equipment worldwide, without the hassle",
     },
 
@@ -43,61 +47,42 @@ const HrTools = () => {
   ];
 
   useEffect(() => {
-    const horizontalScroll = () => {
-      const scrollImages = document.querySelector(".hrtools__cards-container");
-      const scrollLength = scrollImages.scrollWidth - scrollImages.clientWidth;
-      const leftButton = document.querySelector(".hrtools__left-arrow");
-      const rightButton = document.querySelector(".hrtools__right-arrow");
+    const scrollCards = scrollCardsRef.current;
+    const scrollLength = scrollCards.scrollWidth - scrollCards.clientWidth;
 
-      const checkScroll = () => {
-        const currentScroll = scrollImages.scrollLeft;
-        if (currentScroll === 0) {
-          leftButton.setAttribute("disabled", "true");
-          rightButton.removeAttribute("disabled");
-        } else if (currentScroll === scrollLength) {
-          rightButton.setAttribute("disabled", "true");
-          leftButton.removeAttribute("disabled");
-        } else {
-          leftButton.removeAttribute("disabled");
-          rightButton.removeAttribute("disabled");
-        }
-      };
+    const handleScroll = () => {
+      const { scrollLeft } = scrollCards;
+      const { disabled: leftDisabled } = leftButtonRef.current;
+      const { disabled: rightDisabled } = rightButtonRef.current;
 
-      scrollImages.addEventListener("scroll", checkScroll);
-      window.addEventListener("resize", checkScroll);
+      leftButtonRef.current.disabled = scrollLeft === 0;
+      rightButtonRef.current.disabled = scrollLeft === scrollLength;
 
-      const leftScroll = () => {
-        scrollImages.scrollBy({
-          left: -320,
-          behavior: "smooth",
-        });
-      };
-
-      const rightScroll = () => {
-        scrollImages.scrollBy({
-          left: 320,
-          behavior: "smooth",
-        });
-      };
-
-      leftButton.addEventListener("click", leftScroll);
-      rightButton.addEventListener("click", rightScroll);
+      if (leftDisabled !== leftButtonRef.current.disabled) {
+        leftButtonRef.current.disabled = !leftButtonRef.current.disabled;
+      }
+      if (rightDisabled !== rightButtonRef.current.disabled) {
+        rightButtonRef.current.disabled = !rightButtonRef.current.disabled;
+      }
     };
 
-    horizontalScroll();
+    scrollCards?.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
 
-    // Cleanup: Remove event listeners when the component unmounts
     return () => {
-      const scrollImages = document.querySelector(".hrtools__cards-container");
-      const leftButton = document.querySelector(".hrtools__left-arrow");
-      const rightButton = document.querySelector(".hrtools__right-arrow");
-
-      scrollImages.removeEventListener("scroll", horizontalScroll);
-      window.removeEventListener("resize", horizontalScroll);
-      leftButton.removeEventListener("click", horizontalScroll);
-      rightButton.removeEventListener("click", horizontalScroll);
+      scrollCards?.removeEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleScroll);
     };
-  }, []); // Run this effect only once when the component mounts
+  });
+
+  const scrollCards = (scrollValue) => {
+    const scrollCards = scrollCardsRef.current;
+    scrollCards.scrollTo({
+      left: scrollCards.scrollLeft + scrollValue,
+      behavior: "smooth",
+      easing: "ease-in-out",
+    });
+  };
 
   return (
     <section className="hrtools container container--pall">
@@ -106,7 +91,7 @@ const HrTools = () => {
           See you later 16 <br />
           different HR tools
         </h2>
-        <p>
+        <p className="hrtools__text-content">
           We&#39;re simplifying every aspect of managing a worldwide team, from
           benefits and equity to working visas and equipment. It&#39;s one
           platform made to get you set up compliantly in just 5 minutes.
@@ -117,15 +102,19 @@ const HrTools = () => {
         type="button"
         title="button"
         className="hrtools__left-arrow arrow-buttons"
+        ref={leftButtonRef}
+        onClick={() => scrollCards(-340)}
       ></button>
       <button
         type="button"
         title="button"
         className="hrtools__right-arrow arrow-buttons"
+        ref={rightButtonRef}
+        onClick={() => scrollCards(338)}
       ></button>
 
-      <div className="hrtools__scroll-container" style={{ marginRight: "8em" }}>
-        <div className="hrtools__cards-container">
+      <div className="hrtools__scroll-container">
+        <div className="hrtools__cards-container" ref={scrollCardsRef}>
           {cards.map((card, index) => (
             <div
               className="hrtools__card"

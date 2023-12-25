@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <div className="Home">
       <Header />
       <Hero />
       <Platform />
@@ -18,7 +18,7 @@ const Home = () => {
       <Benefits />
       <GetStarted />
       <Footer />
-    </>
+    </div>
   );
 };
 

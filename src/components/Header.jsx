@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="header__navbar">
+      <nav className="header__navbar container container--px">
         <div className="header__left-section">
           <a href="#home" className="mencruit-logo">
             MenCruit
