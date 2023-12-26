@@ -88,9 +88,11 @@
     scroll-behavior: smooth;
     transition: 0.1s ease-in-out;
 
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    @include u.breakpoints-down(medium) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    }
   }
 
   &__card {
