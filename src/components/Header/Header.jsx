@@ -1,7 +1,7 @@
 import SVGIcon from "./SVGIcon";
 import MenuItem from "./MenuItem";
 import { useState, useCallback } from "react";
-import MenuItems from "../utils/menuItems.json";
+import MenuItems from "../../utils/menuItems.json";
 
 const Header = () => {
   const [showDropdown, setDropdown] = useState(null);

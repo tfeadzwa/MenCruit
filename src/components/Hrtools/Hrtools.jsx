@@ -1,50 +1,10 @@
 import { useEffect, useRef } from "react";
+import cardsData from "./cardsData.json";
 
 const HrTools = () => {
   const scrollCardsRef = useRef(null);
   const leftButtonRef = useRef(null);
   const rightButtonRef = useRef(null);
-
-  const cards = [
-    {
-      backgroundColor: "#0e81a0",
-      imageUrl: "src/assets/images/general/visa-support.svg",
-      title: "Hire or relocate team members with in-house visa support",
-    },
-    {
-      backgroundColor: "#f78400",
-      imageUrl: "src/assets/images/general/benefits.svg",
-      title: "Offer country-specific benefits at competitive rates",
-    },
-
-    {
-      backgroundColor: "",
-      imageUrl: "src/assets/images/general/equipment.svg",
-      title: "Send equipment worldwide, without the hassle",
-    },
-
-    {
-      backgroundColor: "#a041ff",
-      imageUrl: "src/assets/images/general/coworking-wework.svg",
-      title: "Provide your team with co-working access via WeWork",
-    },
-
-    {
-      backgroundColor: "#1c4396",
-      imageUrl: "src/assets/images/general/compliant-contracts.svg",
-      title: "Automate any process and sync data with advanced",
-    },
-    {
-      backgroundColor: "#00ac6b",
-      imageUrl: "src/assets/images/general/integrations.svg",
-      title: "Create compliant contracts with a single click",
-    },
-    {
-      backgroundColor: "#1c4396",
-      imageUrl: "src/assets/images/general/compliant-contracts.svg",
-      title: "Automate any process and sync data with advanced",
-    },
-  ];
 
   useEffect(() => {
     const scrollCards = scrollCardsRef.current;
@@ -115,7 +75,7 @@ const HrTools = () => {
 
       <div className="hrtools__scroll-container">
         <div className="hrtools__cards-container" ref={scrollCardsRef}>
-          {cards.map((card, index) => (
+          {cardsData.map((card, index) => (
             <div
               className="hrtools__card"
               key={index}
