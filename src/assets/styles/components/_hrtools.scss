@@ -83,15 +83,17 @@
   &__cards-container {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
-    margin-right: -3rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     transition: 0.1s ease-in-out;
 
-    @include u.breakpoints-down(medium) {
-      overflow-x: scroll;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    @include u.breakpoints-up(large) {
+      overflow: hidden;
+      margin-right: -3rem;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; /* For older Safari versions */
+      overflow-scrolling: touch; /* For newer Safari versions */
     }
   }
 

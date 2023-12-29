@@ -6,7 +6,7 @@ import {
   Benefits,
   GetStarted,
   Footer,
-} from "../components";
+} from "../components/Home";
 
 const Home = () => {
   return (

@@ -1,0 +1,66 @@
+@use "../utils" as u;
+
+.signup-form {
+  &__button-back {
+    margin-bottom: u.$font-16;
+  }
+
+  .signup {
+    &__container {
+      position: absolute;
+      // background-color: aquamarine;
+
+      @include u.breakpoints-up(large) {
+        top: u.$font-16;
+      }
+    }
+
+    &__seperate {
+      margin: u.$font-32 0 1.625rem;
+      width: 50%;
+      height: 0.09375rem; // 1.5px
+      background-color: rgb(209, 211, 213); // gray disabled
+    }
+
+    &__seperate-text {
+      margin: 0 u.$font-32;
+      font-size: u.$font-14;
+      color: rgb(157, 163, 168); // gray
+    }
+  }
+
+  &__google-login-button {
+    background-color: var(--white);
+    width: 100%;
+  }
+
+  .input-field {
+    background-color: white;
+  }
+
+  &__source {
+    z-index: 1000;
+  }
+
+  [is-visible] {
+    display: flex;
+  }
+
+  [is-visible="false"] {
+    display: none;
+  }
+
+  &__create-account {
+    margin: 2.25rem 0 1.5rem;
+  }
+
+  &__terms-services-text {
+    font-size: u.$font-12;
+    font-weight: 400;
+    color: rgb(92, 92, 92);
+
+    a {
+      color: var(--royal-blue);
+    }
+  }
+}

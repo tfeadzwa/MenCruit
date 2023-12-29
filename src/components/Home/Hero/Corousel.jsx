@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Logo from "../../utils/RenderImage";
+import Logo from "../../../utils/RenderImage";
 
 const Carousel = ({ logos }) => {
   const renderLogos = () => {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import platformImage from "../../assets/images/general/one-platform-img.jpg";
+import platformImage from "../../../assets/images/general/one-platform-img.jpg";
 import menusData from "./menusData.json";
 import "./platform.scss";
 

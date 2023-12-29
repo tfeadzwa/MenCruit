@@ -1,7 +1,9 @@
 import SVGIcon from "./SVGIcon";
 import MenuItem from "./MenuItem";
 import { useState, useCallback } from "react";
-import MenuItems from "../../utils/menuItems.json";
+import { Link } from "react-router-dom";
+import MenuItems from "../../../utils/menuItems.json";
+import Login from "../../../pages/Login";
 
 const Header = () => {
   const [showDropdown, setDropdown] = useState(null);
@@ -16,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="header__navbar container container--px">
+      <nav className="header__navbar container">
         <div className="header__left-section">
           <a href="#home" className="mencruit-logo">
             MenCruit
@@ -40,12 +42,12 @@ const Header = () => {
         </div>
         <div className="header__right-section">
           <div className="buttons">
-            <a href="#login" className="login-btn">
+            <Link to="/login" className="login-btn hide-for-mobile">
               Log In
-            </a>
-            <a href="#signup" className="signup-btn">
+            </Link>
+            <Link to="/signup" className="signup-btn">
               Join
-            </a>
+            </Link>
           </div>
           <a
             id="hamburger"
