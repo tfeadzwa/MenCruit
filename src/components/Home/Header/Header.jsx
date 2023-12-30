@@ -3,7 +3,6 @@ import MenuItem from "./MenuItem";
 import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import MenuItems from "../../../utils/menuItems.json";
-import Login from "../../../pages/Login";
 
 const Header = () => {
   const [showDropdown, setDropdown] = useState(null);

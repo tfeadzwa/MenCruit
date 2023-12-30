@@ -1,11 +1,16 @@
 @use "../utils" as u;
 
-//ToDo:
-
 .login {
-  position: relative;
-  justify-content: space-between;
-  height: 100vh;
+  height: 100dvh;
+  background-color: var(--dodger-blue);
+  background-image: url(src/assets/images/general/desktop.svg);
+  background-size: contain;
+
+  &__container {
+    position: relative;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &__logo {
     position: absolute;
@@ -94,12 +99,6 @@
         background-color: hsl(224, 72%, 53%);
       }
     }
-  }
-
-  &__google-icon {
-    height: 1.2rem;
-    width: 1.2rem;
-    margin-right: 0.625rem;
   }
 
   &__seperate {

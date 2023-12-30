@@ -44,7 +44,7 @@ const GoogleLoginButton = ({ onClick }) => {
 };
 
 GoogleLoginButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default GoogleLoginButton;

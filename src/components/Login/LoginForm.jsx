@@ -43,13 +43,19 @@ const LoginForm = ({ onSubmit }) => {
           label="Password"
           required
         />
+        <a
+          href="../views/forgot-password.html"
+          className="login__forgot-password"
+        >
+          Forgot password?
+        </a>
       </div>
     </form>
   );
 };
 
 LoginForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
 };
 
 export default LoginForm;
