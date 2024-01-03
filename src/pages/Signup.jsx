@@ -1,5 +1,7 @@
+import SignupOptions from "../components/Signup/SignupOptions";
+
 const Signup = () => {
-  return;
+  return <SignupOptions />;
 };
 
 export default Signup;

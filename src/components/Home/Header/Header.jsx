@@ -1,11 +1,12 @@
 import SVGIcon from "./SVGIcon";
 import MenuItem from "./MenuItem";
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import MenuItems from "../../../utils/menuItems.json";
 
 const Header = () => {
   const [showDropdown, setDropdown] = useState(null);
+  const [className, setClassName] = useState("");
 
   const handleMouseEnter = useCallback((index) => {
     setDropdown(index);
@@ -15,8 +16,26 @@ const Header = () => {
     setDropdown(null);
   }, []);
 
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 5) {
+      setClassName("header-scroll");
+    } else {
+      setClassName("");
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
-    <header className="header">
+    <header className={`header ${className}`}>
       <nav className="header__navbar container">
         <div className="header__left-section">
           <a href="#home" className="mencruit-logo">

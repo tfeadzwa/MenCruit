@@ -1,0 +1,26 @@
+.header-scroll {
+  background-color: var(--white);
+
+  .mencruit-logo {
+    color: var(--dark-cerulean);
+  }
+
+  li {
+    color: var(--dark-cerulean);
+  }
+
+  #hamburger {
+    > span {
+      background-color: var(--dark-cerulean);
+    }
+  }
+
+  .login-btn {
+    color: var(--dark-cerulean);
+  }
+
+  .signup-btn {
+    color: var(--dark-cerulean);
+    border-color: var(--dark-cerulean);
+  }
+}
