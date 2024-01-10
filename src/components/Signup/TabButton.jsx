@@ -1,11 +1,6 @@
-const TabButton = ({ text, tabIndex, onClick }) => {
+const TabButton = ({ text }) => {
   return (
-    <button
-      type="button"
-      className="tab__button"
-      onClick={onClick}
-      tabIndex={tabIndex}
-    >
+    <button type="button" className="tab__button">
       {text}
     </button>
   );
