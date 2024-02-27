@@ -1,5 +1,6 @@
 import React, { useCallback, useRef, useEffect, useState } from "react";
 import SideIllustration from "./SideIllustration";
+import { Link } from "react-router-dom";
 
 const SignupOptions = () => {
   const [currOption, setCurrOption] = useState(0);
@@ -111,9 +112,9 @@ const SignupOptions = () => {
 
             <div className="hide-for-mobile">
               <span>Already have an account?</span>
-              <a href="./login.html" target="_parent" className="button">
+              <Link className="button" to="/login">
                 Log In
-              </a>
+              </Link>
             </div>
           </div>
         </nav>

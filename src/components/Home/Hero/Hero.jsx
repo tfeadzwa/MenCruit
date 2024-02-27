@@ -1,6 +1,5 @@
 import logos from "./logosData.json";
 import HeroText from "./HeroText";
-import PropTypes from "prop-types";
 import Corousel from "./Corousel";
 
 const Hero = () => {
@@ -27,7 +26,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-Hero.propTypes = {
-  someProp: PropTypes.string,
-};

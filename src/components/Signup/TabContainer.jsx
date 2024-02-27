@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const TabContainer = (title, p1Content, p2Content, p3Content) => {
   return (
     <div className="tab__container hidden">
@@ -16,3 +18,10 @@ const TabContainer = (title, p1Content, p2Content, p3Content) => {
 };
 
 export default TabContainer;
+
+TabContainer.propTypes = {
+  title: PropTypes.string.isRequired,
+  p1Content: PropTypes.arrayOf(PropTypes.object),
+  p2Content: PropTypes.arrayOf(PropTypes.object),
+  p3Content: PropTypes.arrayOf(PropTypes.object),
+};

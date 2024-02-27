@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import InputField from "./InputField";
+import { Link } from "react-router-dom";
 
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
@@ -43,12 +44,9 @@ const LoginForm = ({ onSubmit }) => {
           label="Password"
           required
         />
-        <a
-          href="../views/forgot-password.html"
-          className="login__forgot-password"
-        >
+        <Link to="/forgotpassword" className="login__forgot-password">
           Forgot password?
-        </a>
+        </Link>
       </div>
     </form>
   );

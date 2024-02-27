@@ -32,7 +32,7 @@ const Login = () => {
             </button>
 
             <div className="login__create-account-txt">
-              Need to create an account? <a href="#">Sign Up</a>
+              Need to create an account? <Link to="/signup">Sign Up</Link>
             </div>
           </div>
         </section>
